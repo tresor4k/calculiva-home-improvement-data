@@ -1,0 +1,241 @@
+{
+ "name": "calculiva-home-improvement-constants",
+ "title": "Calculiva home improvement constants register",
+ "version": "2026-10-01",
+ "homepage": "https://calculiva.com/data-sources/",
+ "description": "The sourced trade constants loaded by the calculators on calculiva.com: nominal and actual board sizes, stock lengths, roll and bolt formats, panel modules, allowances and published estimating rules, each with its source, its verification date and its status. The CSV resource is the register and holds no value; the values are in the JSON resource. The calculators' editable default settings are not part of it.",
+ "licenses": [
+  {
+   "name": "CC-BY-4.0",
+   "title": "Creative Commons Attribution 4.0 International",
+   "path": "https://creativecommons.org/licenses/by/4.0/"
+  }
+ ],
+ "rights": "CC BY 4.0 covers Calculiva's own contribution only: the compilation, its structure, the statuses, the scopes and the notes. Third-party values (published charts, list prices, product dimensions, tool outputs) are attributed to their sources and dated; no right over them is granted or claimed. Third-party text is not reproduced: each record names the page it was read on, and the excerpts read stay in Calculiva's working files. Calculiva is not affiliated with any company named.",
+ "contributors": [
+  {
+   "title": "Calculiva",
+   "path": "https://calculiva.com/",
+   "role": "publisher"
+  }
+ ],
+ "keywords": [
+  "home improvement",
+  "construction",
+  "flooring",
+  "tile",
+  "wallpaper",
+  "lumber",
+  "trim",
+  "curtains",
+  "United States"
+ ],
+ "sources": [
+  {
+   "title": "Armstrong / Kanopi manufacturer planning resources",
+   "path": "https://kanopibyarmstrong.com/pages/how-to-cut-borders"
+  },
+  {
+   "title": "Asphalt Institute, Engineering FAQs",
+   "path": "https://www.asphaltinstitute.org/engineering/engineering-faqs/"
+  },
+  {
+   "title": "Bob Vila — \"The Right Wainscoting Height for Every Scenario, Solved!\"",
+   "path": "https://www.bobvila.com/articles/wainscoting-height/"
+  },
+  {
+   "title": "Daltile and Ceramic Tile Education Foundation — installation guidance",
+   "path": "https://www.daltile.com/trend-hub/design-ideas-library/grout-joints-for-large-format-tile"
+  },
+  {
+   "title": "Home Depot measuring guide, Omni, Home Project Calculator, Sailrite Fabric Calculator, TwoPages, Jane Clayton, Best Fabric Store, sew-helpful, House of Ekam, the AI Overview; read and executed 10 September 2026",
+   "path": "https://www.homedepot.com/c/ah/how-to-measure-curtains/9ba683603be9fa5395fab90a2ca03be"
+  },
+  {
+   "title": "Inch Calculator, first organic result for \"board and batten calculator\" (SERP read on 2026-09-09)",
+   "path": "https://www.inchcalculator.com/board-and-batten-layout-calculator/"
+  },
+  {
+   "title": "Live executions of ranking carpet calculators, 10 September 2026 (MeasureSquare carpet calculator as reference)",
+   "path": "https://calculator.measuresquare.com/carpet"
+  },
+  {
+   "title": "Live executions of ranking flooring cost estimators, 10 September 2026",
+   "path": "https://floorfreight.com/cost-calculator"
+  },
+  {
+   "title": "Live executions of ranking gym flooring calculators, 10 September 2026 (GrytFit layout visualizer as reference)",
+   "path": "https://grytfit.com/pages/flooring-calculator-new"
+  },
+  {
+   "title": "Lowe’s live product specifications",
+   "path": "https://www.lowes.com/pd/Satori-Statuario-Polished-Porcelain-Common-Actual-23-62-in-x-11-81-in/1002802304"
+  },
+  {
+   "title": "MAPEI Ultracolor Plus FA technical data sheet (Edition Date: August 28, 2026); LATICRETE PERMACOLOR Grout data sheet DS-250-0926",
+   "path": "https://cdnmedia.mapei.com/docs/librariesprovider67/products-documents/1_3000144_ultracolor-plus-fa_en-us_979a424a35724d82980fa0332f798319.pdf"
+  },
+  {
+   "title": "MSI Patterned Floor Tile Tool — Herringbone",
+   "path": "https://www.msisurfaces.com/patterned-floor-tile-tool/"
+  },
+  {
+   "title": "MSI mosaic and paper/film faced installation guides",
+   "path": "https://cdn.msisurfaces.com/files/flyers/mosaic-installation-guide-decorative-accents-flyer.pdf"
+  },
+  {
+   "title": "NIST Handbook 130 (2026 edition), Sections IV-A and IV-B; Caterpillar, Earthwork volumes reference tables; NHTSA interpretation of FMVSS No. 110, S4.3",
+   "path": "https://www.nist.gov/document/2026-hb-130-section-iv-b"
+  },
+  {
+   "title": "NIST Handbook 44 Appendix C (gallon = 231 cubic inches) and live executions of ranking epoxy calculators, 10 September 2026",
+   "path": "https://www.epoxy.com/epoxy_calculators/coatingcalc.aspx"
+  },
+  {
+   "title": "NewTechWood installation guide and IKEA decking measurement guide",
+   "path": "https://www.newtechwood.com/composite-deck-tile-installation/"
+  },
+  {
+   "title": "PS 20, American Softwood Lumber Standard (NIST) — table \"Boards dressed, S4S, dry\" as reproduced by the Southern Forest Products Association",
+   "path": "https://www.southernpine.com/resources/specifying-southern-pine-lumber/standard-sizing/"
+  },
+  {
+   "title": "Penn State Extension; Texas A&M AgriLife Extension; UF/IFAS Extension (LH013, LH010); NC State Extension",
+   "path": "https://extension.psu.edu/lawn-establishment/"
+  },
+  {
+   "title": "Penn State Extension; University of Maryland Extension; Iowa State University Extension; UC Marin Master Gardeners (UC ANR); NCUFC; Casey Trees; City of Maple Grove, Minnesota",
+   "path": "https://extension.psu.edu/mulching-landscape-trees/"
+  },
+  {
+   "title": "Pergo Classics Installation Instructions, 03/2021, page 4, steps 5–6",
+   "path": "https://pdf.lowes.com/productdocuments/47daec0b-407e-4991-81de-582e5786a097/65848084.pdf"
+  },
+  {
+   "title": "Pergo Classics installation instructions, March 2021, page 2",
+   "path": "https://pdf.lowes.com/productdocuments/47daec0b-407e-4991-81de-582e5786a097/65848084.pdf"
+  },
+  {
+   "title": "PoolTile measurement guide and Ezarri mosaic calculator",
+   "path": "https://pooltile.ca/how-to-measure-and-calculate-your-pool-size/"
+  },
+  {
+   "title": "Scotts Miracle-Gro product page and retail listings; True Temper listing; five soil calculators ranking in the United States",
+   "path": "https://scottsmiraclegro.com/en-us/brands/miracle-gro/products/raised-bed-in-ground-soils/miracle-gro-garden-soil-all-purpose/70551430.html"
+  },
+  {
+   "title": "Scotts Nature Scapes product page; five mulch calculators ranking in the United States",
+   "path": "https://scottsmiraclegro.com/en-us/brands/scotts/products/browse-all-scotts-products/scotts-nature-scapes-color-enhanced-mulch/88559442.html"
+  },
+  {
+   "title": "Sod Solutions (Sod University); Tri-Turf Sod Farms; Tip's Turf; Royal Landscape Nursery; Saratoga Sod Farm; Inch Calculator; Texas A&M AgriLife Extension",
+   "path": "https://sodsolutions.com/sod-university/square-feet-per-pallet/"
+  },
+  {
+   "title": "Somerset SolidPlus Engineered Installation, racking paragraph",
+   "path": "https://www.somersetfloors.com/engineered-installation"
+  },
+  {
+   "title": "The Home Depot, MDF Boards / Primed category — \"Common\" and \"Actual\" labels on the product pages",
+   "path": "https://www.homedepot.com/b/Lumber-Composites-Boards-Planks-MDF-Boards/Primed/N-5yc1vZchzsZ1z0sfky"
+  },
+  {
+   "title": "The Home Depot, primed MDF 1x3 and 1x4 product pages",
+   "path": "https://www.homedepot.com/b/Lumber-Composites-Boards-Planks-MDF-Boards/Primed/N-5yc1vZchzsZ1z0sfky"
+  },
+  {
+   "title": "Tile Council of North America (TCNA), Resource Center FAQ: Grout",
+   "path": "https://tcnatile.com/resource-center/faq/grout/"
+  },
+  {
+   "title": "U.S. Consumer Product Safety Commission, Outdoor Home Playground Safety Handbook (Publication 324) and Public Playground Safety Handbook (Publication 325)",
+   "path": "https://www.cpsc.gov/s3fs-public/324.pdf"
+  },
+  {
+   "title": "UF/IFAS Extension, Establishing Your Florida Lawn (LH013), Table 3; NC State Extension, Carolina Lawns",
+   "path": "https://ask.ifas.ufl.edu/publication/LH013"
+  },
+  {
+   "title": "WoodWeb Knowledge Base — \"Waste Allowance for Running Trim\", a thread among millwork professionals",
+   "path": "https://www.woodweb.com/knowledge_base/Waste_Allowance_for_Running_Trim.html"
+  },
+  {
+   "title": "York Wallcoverings roll estimation chart and live executions of ranking wallpaper calculators, 10 September 2026"
+  },
+  {
+   "title": "paintedpaper.com product pages, product JSON, measuring guide, FAQ and the estimator script hc-custom.js, 10 September 2026",
+   "path": "https://paintedpaper.com/products/odette-arboretum-wallpaper"
+  },
+  {
+   "title": "yorkwallcoverings.com wallpaper calculator chart, two product pages, the installation FAQ and the script WallpaperCalculator.js, 10 September 2026"
+  }
+ ],
+ "resources": [
+  {
+   "name": "register",
+   "path": "https://calculiva.com/data/calculiva-home-improvement-constants.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "encoding": "utf-8",
+   "description": "The register: one row per record, with its source, its dates and its status. It holds no value and no unit.",
+   "schema": {
+    "fields": [
+     {
+      "name": "id",
+      "type": "string",
+      "description": "Stable identifier of the record; also the key of the full record in the JSON file."
+     },
+     {
+      "name": "label",
+      "type": "string",
+      "description": "What the record holds."
+     },
+     {
+      "name": "status",
+      "type": "string",
+      "description": "standard = taken from a published reference document cited by title and section; market_survey = read on products or tools on a stated date, always with an expiry date; convention = widely repeated, no normative source."
+     },
+     {
+      "name": "scope",
+      "type": "string",
+      "description": "Where the values apply, and where they do not."
+     },
+     {
+      "name": "source_name",
+      "type": "string",
+      "description": "The document, product page or tool the values were read from."
+     },
+     {
+      "name": "source_url",
+      "type": "string",
+      "description": "URL of that source. Empty when the publisher has removed the page since the reading; the JSON record then explains it in source_status."
+     },
+     {
+      "name": "verified_at",
+      "type": "date",
+      "description": "Date the source was last read (ISO 8601)."
+     },
+     {
+      "name": "expires_at",
+      "type": "date",
+      "description": "Date after which the record is left out of this dataset until its source is read again. Every market survey has one and a convention may have one; empty when the record does not expire."
+     },
+     {
+      "name": "sample_size",
+      "type": "integer",
+      "description": "Number of products or executions observed, when the record is a survey."
+     }
+    ],
+    "primaryKey": "id"
+   }
+  },
+  {
+   "name": "records",
+   "path": "https://calculiva.com/data/calculiva-home-improvement-constants.json",
+   "format": "json",
+   "mediatype": "application/json",
+   "encoding": "utf-8",
+   "description": "Full records, values included. The keys beyond the register columns differ from one record to the next, because a lumber table and a wallpaper bolt chart do not share a shape."
+  }
+ ]
+}

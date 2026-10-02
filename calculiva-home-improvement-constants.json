@@ -1,0 +1,3828 @@
+{
+ "name": "calculiva-home-improvement-constants",
+ "title": "Calculiva home improvement constants register",
+ "version": "2026-10-01",
+ "license": "CC-BY-4.0",
+ "rights": "CC BY 4.0 covers Calculiva's own contribution only: the compilation, its structure, the statuses, the scopes and the notes. Third-party values (published charts, list prices, product dimensions, tool outputs) are attributed to their sources and dated; no right over them is granted or claimed. Third-party text is not reproduced: each record names the page it was read on, and the excerpts read stay in Calculiva's working files. Calculiva is not affiliated with any company named.",
+ "homepage": "https://calculiva.com/data-sources/",
+ "publisher": "Calculiva",
+ "records": [
+  {
+   "id": "asphalt-unit-weight-observations",
+   "label": "Hot mix asphalt: in-place unit weight, lift thickness rules and what ranking calculators assume",
+   "status": "market_survey",
+   "source_name": "Asphalt Institute, Engineering FAQs",
+   "source_url": "https://www.asphaltinstitute.org/engineering/engineering-faqs/",
+   "verified_at": "2026-09-18",
+   "expires_at": "2027-03-18",
+   "scope": "Compacted hot mix asphalt on residential paving in the United States. The unit weight of a delivered mix belongs to its mix design; the values here are what named publishers state or what their tools compute on the verification date. No pavement thickness recommendation is included: none was read in a normative source.",
+   "sample_size": 4,
+   "physical_basis": {
+    "water_pcf": 62.4,
+    "pounds_per_short_ton": 2000,
+    "example": {
+     "rice_value": 2.5,
+     "max_pcf": 156.0,
+     "compaction_percent": 95,
+     "in_place_pcf": 148.2
+    }
+   },
+   "in_place_range_pcf": {
+    "min": 142,
+    "max": 148,
+    "publisher_default": 148
+   },
+   "worked_example": {
+    "length_ft": 10,
+    "width_ft": 25,
+    "thickness_in": 4,
+    "cubic_feet": 83.3,
+    "pcf": 148,
+    "pounds": 12328,
+    "tons": 6.1
+   },
+   "lift_rules": {
+    "min_lift_multiple_of_nmas": 3,
+    "max_lift_static_roller_in": 3,
+    "max_lift_vibratory_in": 8
+   },
+   "references": [
+    {
+     "id": "ai-low",
+     "label": "Asphalt Institute, low end of the in-place range",
+     "pcf": 142,
+     "publisher": "Asphalt Institute",
+     "url": "https://www.asphaltinstitute.org/engineering/engineering-faqs/",
+     "stated": true
+    },
+    {
+     "id": "mapa",
+     "label": "Missouri Asphalt Pavement Association calculator, 110 lb per sq yd per inch",
+     "pcf": 146.6667,
+     "lb_per_sy_in": 110,
+     "publisher": "Missouri Asphalt Pavement Association",
+     "url": "https://www.asphaltisbest.com/asphalt-calculator",
+     "stated": true
+    },
+    {
+     "id": "ai-use",
+     "label": "Asphalt Institute, the value it tells estimators to use",
+     "pcf": 148,
+     "publisher": "Asphalt Institute",
+     "url": "https://www.asphaltinstitute.org/engineering/engineering-faqs/",
+     "stated": true
+    },
+    {
+     "id": "reeves",
+     "label": "Reeves Construction calculator, value read in its script",
+     "pcf": 150,
+     "publisher": "Reeves Construction Company",
+     "url": "https://reevescc.com/asphalt-calculator/",
+     "stated": false,
+     "formula_read": "150 x width x length x depth/12 / 2000"
+    }
+   ],
+   "observations": [
+    {
+     "tool": "Missouri Asphalt Pavement Association",
+     "url": "https://www.asphaltisbest.com/asphalt-calculator",
+     "basis": "width/3 x length/3 x thickness x 110 / 2000; one rectangle; unit weight stated on the page",
+     "inputs": "20 x 20 ft at 2 in",
+     "outputs": "4.89 tons"
+    },
+    {
+     "tool": "Reeves Construction Company",
+     "url": "https://reevescc.com/asphalt-calculator/",
+     "basis": "150 lb per cubic foot, not shown to the user; one rectangle",
+     "inputs": "20 x 20 ft at 2 in",
+     "outputs": "5.00 tons, 2.47 cu yd, 66.7 cu ft"
+    },
+    {
+     "tool": "Pike Industries",
+     "url": "https://pikeindustries.com/material-calculators/",
+     "basis": "length, width, depth; one rectangle; no unit weight published",
+     "inputs": "page read",
+     "outputs": "not executed"
+    },
+    {
+     "tool": "Vulcan Materials",
+     "url": "https://www.vulcanmaterials.com/construction-materials/product-calculators/asphalt-mixtures",
+     "basis": "width, length, thickness and a density the user must supply; one rectangle",
+     "inputs": "page read",
+     "outputs": "not executed"
+    }
+   ]
+  },
+  {
+   "id": "batten-spacing-conventions",
+   "label": "Usual spacing between battens on an interior wall",
+   "status": "convention",
+   "source_name": "Inch Calculator, first organic result for \"board and batten calculator\" (SERP read on 2026-09-09)",
+   "source_url": "https://www.inchcalculator.com/board-and-batten-layout-calculator/",
+   "verified_at": "2026-09-09",
+   "expires_at": "2027-09-09",
+   "scope": "decorative interior wall paneling (faux board and batten). Does not apply to exterior siding, where spacing depends on board width and substrate.",
+   "sample_size": 1,
+   "range_in": {
+    "min": 10,
+    "max": 12
+   },
+   "typical_in": 12,
+   "no_normative_source": true
+  },
+  {
+   "id": "carpet-roll-observations",
+   "label": "Carpet estimators: what they multiply, observed executions",
+   "status": "market_survey",
+   "source_name": "Live executions of ranking carpet calculators, 10 September 2026 (MeasureSquare carpet calculator as reference)",
+   "source_url": "https://calculator.measuresquare.com/carpet",
+   "verified_at": "2026-09-10",
+   "expires_at": "2027-03-10",
+   "sample_size": 7,
+   "scope": "Behaviour of public estimators on the day tested, with the inputs recorded. The 12-foot roll width, 3-inch cut margin and 10 percent flat waste are the defaults those tools displayed, not Calculiva conventions: enter the roll width and margin of the product actually quoted. Broadloom is sold by the linear foot from the roll; no price or regional labor figure is recorded.",
+   "observations": [
+    {
+     "tool": "MeasureSquare carpet calculator",
+     "url": "https://calculator.measuresquare.com/carpet",
+     "basis": "drops and fill pieces cut from a 12 ft roll with a 3 in margin, T-seams allowed in the fill, layout image and cut sheet rendered before the optional email",
+     "inputs": "12 × 15 ft; 14 × 16 ft; 14 × 22 ft (rectangle, defaults)",
+     "outputs": "15′3″ linear, 183 SF, 20.33 SY, 1.6 % waste; 19′2″ linear (12×14′3″ drop + three 4′11″ fill pieces), 230 SF, 25.56 SY, 2.6 %; 28′6″ linear (12×14′3″ + 10×14′3″), 342 SF, 38.00 SY, 9.9 %"
+    },
+    {
+     "tool": "Godfrey Hirst floor calculator (North America)",
+     "url": "https://www.godfreyhirst.com/na/calculator",
+     "basis": "square feet plus a wastage percentage (default 10), square yards; note states 3.66 m width for lineal calculations",
+     "inputs": "12 × 15 ft carpet",
+     "outputs": "180.00 sub total, 18.00 wastage, 198.00 ft², 21.78 yd²"
+    },
+    {
+     "tool": "The Perfect Carpet calculator",
+     "url": "https://www.theperfectcarpet.com/carpet-calculator",
+     "basis": "rooms and staircases → square feet, 10 % waste, linear roll length = area with waste ÷ roll width",
+     "inputs": "12 × 15 ft, 0 staircases",
+     "outputs": "180.00 sq ft, waste 18.00, 198.00 sq ft; linear length 16.50 ft at 12 ft, 15.23 ft at 13 ft, 13.20 ft at 15 ft width"
+    },
+    {
+     "tool": "Omni Calculator carpet",
+     "url": "https://www.omnicalculator.com/construction/carpet",
+     "basis": "shape → area × price",
+     "inputs": "rectangle 12 × 15 (meters by default)",
+     "outputs": "180 m² area; cost field multiplies by price"
+    },
+    {
+     "tool": "S&G Carpet and More calculator",
+     "url": "https://www.sgcarpet.com/calculator/",
+     "basis": "rooms in feet or inches, optional price; page states 10 % waste; results behind a form submit",
+     "inputs": "page read",
+     "outputs": "totals not captured; 10 % waste rule recorded from the page"
+    },
+    {
+     "tool": "Carpet Guys square foot calculator",
+     "url": "https://www.carpetguys.com/calculator/",
+     "basis": "rooms in feet and inches, rounded up to the inch, total square feet × price per square foot",
+     "inputs": "12 × 15 ft",
+     "outputs": "form submitted; totals not captured by the test browser"
+    },
+    {
+     "tool": "Lowe's carpet measurement calculator",
+     "url": "https://www.lowes.com/n/calculators/carpet-measurement-calculator",
+     "basis": "not executed: lowes.com answered Access Denied to the test environment on 2026-09-10",
+     "inputs": "none",
+     "outputs": "none"
+    }
+   ]
+  },
+  {
+   "id": "ceiling-panel-guidance",
+   "label": "Suspended ceiling module and border planning",
+   "status": "convention",
+   "source_name": "Armstrong / Kanopi manufacturer planning resources",
+   "source_url": "https://kanopibyarmstrong.com/pages/how-to-cut-borders",
+   "lighting_source_url": "https://kanopibyarmstrong.com/pages/how-to-install-lighting",
+   "module_source_url": "https://www.armstrongceilings.com/drop-ceiling-calculator/en-us",
+   "verified_at": "2026-09-10",
+   "expires_at": "2027-03-10",
+   "scope": "Nominal module sizes observed in the manufacturer planner. Border-edge profiles and lighting need product-specific installation instructions; no universal fit deduction, support capacity or clearance is asserted.",
+   "nominal_modules_in": [
+    [
+     24,
+     24
+    ],
+    [
+     24,
+     48
+    ]
+   ],
+   "notes": "Plain cuttable rectangular panels only. Scored visual subdivisions and tegular/reveal edge fabrication are separate from rectangular plan geometry. The calculator's dimensions, carton size, minimum border and zero fit deduction are a worked example, not a real product preset."
+  },
+  {
+   "id": "curtain-measuring-conventions",
+   "label": "Curtain sizing and drapery yardage conventions as published by the ranking tools and guides, with their executions",
+   "status": "market_survey",
+   "source_name": "Home Depot measuring guide, Omni, Home Project Calculator, Sailrite Fabric Calculator, TwoPages, Jane Clayton, Best Fabric Store, sew-helpful, House of Ekam, the AI Overview; read and executed 10 September 2026",
+   "source_url": "https://www.homedepot.com/c/ah/how-to-measure-curtains/9ba683603be9fa5395fab90a2ca03be",
+   "verified_at": "2026-09-10",
+   "expires_at": "2027-03-10",
+   "sample_size": 12,
+   "scope": "Every figure is attributed to the publisher that states it; ranges are theirs, not a consensus. Calculiva's calculators preload one value from each range as an example and every field can be changed. Nothing here is a standard: US curtain sizing has no governing standard, and the publishers disagree on extension, height and finish.",
+   "fullness": [
+    {
+     "publisher": "Home Depot",
+     "rule": "curtain widths at least two to three times the length of the rod",
+     "url": "https://www.homedepot.com/c/ah/how-to-measure-curtains/9ba683603be9fa5395fab90a2ca03be"
+    },
+    {
+     "publisher": "Omni Calculator",
+     "rule": "standard ×2, deluxe ×2.5, ultra ×3 of the window width",
+     "url": "https://www.omnicalculator.com/everyday-life/curtain-size"
+    },
+    {
+     "publisher": "Sailrite Fabric Calculator",
+     "rule": "options 1.25, 1.5, 2, 2.5, 3; 1.5 for thicker fabrics, 2 average for draperies, 3 for sheers",
+     "url": "https://www.fabric-calculator.com/window-curtains.aspx"
+    },
+    {
+     "publisher": "Home Project Calculator",
+     "rule": "1.5–2 grommet and rod pocket, 2–2.5 pleated, 2+ sheer; defaults 2.0 standard and 2.2 pleated",
+     "url": "https://homeprojectcalculator.com/curtain-size-calculator/"
+    },
+    {
+     "publisher": "sew-helpful",
+     "rule": "pencil pleat 2.5, double pleat 1.6–2.4, triple pleat 2.5, goblet 2.5, cartridge 2.2–2.4, inverted pleat 1.6–1.8",
+     "url": "https://www.sew-helpful.com/fullness-ratio.php"
+    }
+   ],
+   "rod_extension_per_side_in": [
+    {
+     "publisher": "AI Overview (Google)",
+     "range": [
+      4,
+      12
+     ]
+    },
+    {
+     "publisher": "Home Project Calculator",
+     "range": [
+      3,
+      6
+     ],
+     "default": 4,
+     "url": "https://homeprojectcalculator.com/curtain-size-calculator/"
+    },
+    {
+     "publisher": "TwoPages",
+     "range": [
+      6,
+      15
+     ],
+     "url": "https://twopagescurtains.com/pages/drapery-measurement-finder"
+    },
+    {
+     "publisher": "Jane Clayton",
+     "range": [
+      6,
+      14
+     ],
+     "url": "https://www.janeclayton.com/drapery-fabric-quantity-calculator/"
+    },
+    {
+     "publisher": "House of Ekam",
+     "range": [
+      10,
+      12
+     ],
+     "url": "https://houseofekam.com/pages/curtain-calculator"
+    }
+   ],
+   "rod_height_above_frame_in": [
+    {
+     "publisher": "Omni Calculator",
+     "rule": "add 4 in to the window height for the rod, 6 in for very high ceilings, another 6 in for a pooling curtain"
+    },
+    {
+     "publisher": "House of Ekam",
+     "range": [
+      4,
+      6
+     ]
+    },
+    {
+     "publisher": "Home Project Calculator",
+     "range": [
+      4,
+      6
+     ],
+     "dramatic": [
+      8,
+      12
+     ]
+    },
+    {
+     "publisher": "TwoPages",
+     "range": [
+      6,
+      10
+     ],
+     "note": "wall mount"
+    }
+   ],
+   "floor_finish_in": [
+    {
+     "publisher": "Home Depot",
+     "options": {
+      "hover": 0,
+      "trouser break": 1,
+      "puddle restrained": 3,
+      "puddle lavish": 6
+     }
+    },
+    {
+     "publisher": "Home Project Calculator",
+     "options": {
+      "hover": -0.5,
+      "kiss": 0,
+      "slight break": 1,
+      "puddle": 6
+     }
+    },
+    {
+     "publisher": "AI Overview (Google)",
+     "options": {
+      "clean": -0.5,
+      "puddle": "1 to 2"
+     }
+    },
+    {
+     "publisher": "TwoPages",
+     "options": {
+      "float": -1,
+      "kiss": 0,
+      "puddle": 1
+     }
+    },
+    {
+     "publisher": "House of Ekam",
+     "options": {
+      "above the ground": "-1 to -2",
+      "puddle": "1 to 2"
+     }
+    }
+   ],
+   "ready_made_lengths_in": {
+    "Home Depot": [
+     63,
+     84,
+     96,
+     108,
+     120
+    ],
+    "Home Project Calculator": [
+     63,
+     84,
+     96,
+     108,
+     120
+    ],
+    "Omni Calculator": [
+     72,
+     84,
+     96,
+     108
+    ]
+   },
+   "ready_made_panel_widths_in": {
+    "AI Overview (Google)": [
+     50,
+     54
+    ],
+    "Home Project Calculator": [
+     50,
+     52,
+     54
+    ],
+    "House of Ekam": [
+     42,
+     43
+    ]
+   },
+   "fabric_widths_in": {
+    "Sailrite Fabric Calculator": [
+     46,
+     54,
+     60
+    ],
+    "sew-helpful": "usable width about 137 cm (54 in); double width about 280 cm"
+   },
+   "allowances": [
+    {
+     "publisher": "Jane Clayton",
+     "rule": "12 in added per drop for hems and heading turnings",
+     "url": "https://www.janeclayton.com/drapery-fabric-quantity-calculator/"
+    },
+    {
+     "publisher": "Best Fabric Store",
+     "rule": "workroom adds 16 in per panel for hem and rod pocket; with a repeat, add the repeat to each panel after the first; example 84 in finished: 100 in per panel, 200 in for two, '5.625 yards / 6 to be safe'",
+     "url": "https://bestfabricstore.com/YCAL.html"
+    },
+    {
+     "publisher": "sew-helpful",
+     "rule": "fabric double 3 in hem up to 60 in long, double 4 in hem above; lining double 2½ in and 3 in; 2 in trimming allowance on plain cut drops; patterned cut drops rounded up to whole repeats (adjusted cut drop); widths rounded up to whole widths unless rounded down",
+     "url": "https://www.sew-helpful.com/curtain-fabric-calculator.php"
+    },
+    {
+     "publisher": "Sailrite Fabric Calculator",
+     "rule": "1 in per panel added for hems (seam allowance); top and bottom hem entered by the user, doubled if double hems",
+     "url": "https://www.fabric-calculator.com/window-curtains.aspx"
+    }
+   ],
+   "executions": [
+    {
+     "tool": "Home Project Calculator",
+     "inputs": "48 in window, 84 in rod to floor, standard, 2 panels",
+     "outputs": "rod width 56.0 in excl. finials, panel length 84.0 (std 84), per-panel width 56.0 for 2 panels, 3 ready-made panels at 52 in, fullness 2.0, kiss, extension 4.0 per side"
+    },
+    {
+     "tool": "Home Project Calculator",
+     "inputs": "96 in window, 84 in",
+     "outputs": "rod 104.0, per panel 104.0, 4 panels at 52 in"
+    },
+    {
+     "tool": "Home Project Calculator",
+     "inputs": "100 in window, 84 in, pleated",
+     "outputs": "rod 108.0, per panel 118.8 (fullness 2.2), 5 panels at 52 in"
+    },
+    {
+     "tool": "Home Project Calculator",
+     "inputs": "72 in window, 84 in",
+     "outputs": "rod 80.0, per panel 80.0, 4 panels at 52 in"
+    },
+    {
+     "tool": "Omni Calculator",
+     "inputs": "window 84 in high, 48 in wide, floor length, standard fullness",
+     "outputs": "curtain length 88 in, width 96 in; deluxe 120 in; extra long 94 in"
+    },
+    {
+     "tool": "Sailrite Fabric Calculator",
+     "inputs": "width 48, height 84, hems 8, 1 pair, fabric 54, fullness 2, repeat 0",
+     "outputs": "224 inches or 6.22 yards; each curtain 1.61 fabric widths (1 inch of seam allowance); 0 inches added for pattern matching; left over a rectangle 21 in wide by 112 in"
+    },
+    {
+     "tool": "Sailrite Fabric Calculator",
+     "inputs": "same with vertical repeat 27",
+     "outputs": "299 inches or 8.31 yards; 75 inches added for pattern matching; left over 21 in by 162 in"
+    },
+    {
+     "tool": "sew-helpful",
+     "inputs": "60 in pole, 84 in, 54 in fabric, pencil pleat, pair, fullness 2",
+     "outputs": "NOT ACCEPTED by the test browser (results stayed at 0 yds); assumptions read instead"
+    },
+    {
+     "tool": "Jane Clayton",
+     "inputs": "pair, 5 ft rod, 7 ft length, pinch pleat, standard, 54 in, no repeat",
+     "outputs": "NOT CAPTURED after submit; the page states 12 in per drop and that fabric used sideways is not supported"
+    },
+    {
+     "tool": "TwoPages measurement finder",
+     "inputs": "not installed, rod pocket; step 3 fields window frame width, left and right extension (recommended 6–15 in), frame top to floor, height above frame (6–10 in wall mount), eighths of an inch",
+     "outputs": "finished look options float −1 in, kiss, puddle +1 in; result not reached (Continue disabled until every field is filled)"
+    },
+    {
+     "tool": "Dolcewe",
+     "inputs": "header, rod installed, rod length in inches, drapery length in inches, single or split",
+     "outputs": "result not reached in the test browser; 2026-09-09 audit: rounds to whole inches"
+    },
+    {
+     "tool": "Pepper Home",
+     "inputs": "about thirty-step wizard, server HTML empty",
+     "outputs": "not walked; ends on a product collection (2026-09-09 audit)"
+    }
+   ],
+   "best_fabric_store_chart": {
+    "basis": "pair of basic drapery panels at 2.5× fullness; solids and small prints / medium prints (repeat to 12 in) / large prints (repeat to 24 in)",
+    "rows": [
+     [
+      60,
+      4.5,
+      5,
+      5.5
+     ],
+     [
+      70,
+      5,
+      5.5,
+      6
+     ],
+     [
+      80,
+      5.5,
+      6,
+      6.5
+     ],
+     [
+      90,
+      6,
+      6.5,
+      7
+     ],
+     [
+      100,
+      6.75,
+      7,
+      7.25
+     ],
+     [
+      110,
+      7.25,
+      7.5,
+      7.75
+     ],
+     [
+      120,
+      7.75,
+      8,
+      8.5
+     ]
+    ],
+    "unit": "finished length in inches, yards"
+   }
+  },
+  {
+   "id": "deck-module-guidance",
+   "label": "Interlocking deck module planning",
+   "status": "convention",
+   "source_name": "NewTechWood installation guide and IKEA decking measurement guide",
+   "source_url": "https://www.newtechwood.com/composite-deck-tile-installation/",
+   "measurement_source_url": "https://www.ikea.com/us/en/rooms/outdoor/how-to/how-to-calculate-how-much-decking-you-need-pub10a87010/",
+   "verified_at": "2026-09-10",
+   "expires_at": "2027-03-10",
+   "scope": "The repeating installed module is the counting unit. Cut locations require inspection of the product backing and screws. No universal gap, connector ratio, structural capacity or pack size is asserted.",
+   "notes": "All initial dimensions,10 per box,5% reserve and zero clearances are an explicitly hypothetical worked example, not a product preset. Module dimensions and packaging must come from the selected product. A cut does not automatically retain interlocking edges. No offcut reuse assumed."
+  },
+  {
+   "id": "epoxy-coverage-observations",
+   "label": "Epoxy floor coverage: physical basis and observed estimator rules",
+   "status": "market_survey",
+   "source_name": "NIST Handbook 44 Appendix C (gallon = 231 cubic inches) and live executions of ranking epoxy calculators, 10 September 2026",
+   "source_url": "https://www.epoxy.com/epoxy_calculators/coatingcalc.aspx",
+   "verified_at": "2026-09-10",
+   "expires_at": "2027-03-10",
+   "sample_size": 7,
+   "scope": "The physical basis is exact and product-independent: one US gallon is 231 cubic inches, one mil is 0.001 inch, so one gallon spread at one mil dry film with 100 percent volume solids covers 231,000 square inches, 1,604.17 square feet. Vendor coverage rates, kit sizes and mix ratios below belong to their publishers on the day tested; they illustrate how public estimators multiply and are never Calculiva defaults. Every thickness, solids figure, loss allowance, kit size, ratio and broadcast rate preloaded in the calculator is a hypothetical exercise to be replaced by the product's technical data sheet.",
+   "physical_basis": {
+    "gallon_cubic_inches": 231,
+    "mil_inches": 0.001,
+    "sqft_per_gallon_at_one_mil_full_solids": 1604.17,
+    "reference": "https://www.nist.gov/pml/owm/nist-handbook-44-current-edition"
+   },
+   "observations": [
+    {
+     "tool": "Epoxy.com coating calculator",
+     "url": "https://www.epoxy.com/epoxy_calculators/coatingcalc.aspx",
+     "basis": "square feet × fixed product rates, rounded up to 3-gallon units, waste excluded",
+     "inputs": "400 sq ft; 1,000 sq ft",
+     "outputs": "primer 1.60 gal (order 3), coating 5.00 gal (order 6), anti-skid 0.63 gal (order 1); at 1,000 sq ft primer 4.00 (order 6), coating 12.50 (order 15)"
+    },
+    {
+     "tool": "Omni Calculator epoxy",
+     "url": "https://www.omnicalculator.com/construction/epoxy",
+     "basis": "area × coating thickness = volume, any units, no solids, kits or coats",
+     "inputs": "2 mm on 400 × 300 cm",
+     "outputs": "24,000 mL"
+    },
+    {
+     "tool": "Magic Resin floor kit builder",
+     "url": "https://magicresin.ca/pages/floor-epoxy-flakes-polyaspartic-calculator",
+     "basis": "square feet → product kits and Canadian prices; option-dependent rates stated on screen",
+     "inputs": "400 sq ft; then full flake broadcast",
+     "outputs": "~4.6 gallons, one 6-gallon kit; with flakes ~5.5 gallons, 60 lb flakes (40 + 20 lb bags), topcoat at ~1 gal per 125 sq ft under full flakes; metallic ~1 gal per 50 sq ft"
+    },
+    {
+     "tool": "Epoxy FX calculators",
+     "url": "https://www.epoxyfx.com/epoxy-flooring-calculator/",
+     "basis": "three product calculators; the coatings one derives sq ft per gallon from mil thickness and a coverage percentage, single coat, no kits",
+     "inputs": "page read; the live tool returned HTTP 503 on the test date",
+     "outputs": "MarbleWRAP 80–100 sq ft/gal, flake floor 175 sq ft/gal with one color per 3-gallon kit and flake pounds by coverage level"
+    },
+    {
+     "tool": "TotalBoat epoxy calculator",
+     "url": "https://www.totalboat.com/pages/epoxy-calculator",
+     "basis": "length × width × thickness in inches → cubic inches → ounces and gallons at 231 cubic inches per gallon",
+     "inputs": "240 × 240 × 0.01 in",
+     "outputs": "576.0 cu in, 319.1 oz, 2.494 gal"
+    },
+    {
+     "tool": "Manadatec floor coating calculator",
+     "url": "https://www.manadatec.com/service-help/quantity-calculator/",
+     "basis": "meters × meters → kilograms per coat for one product, two coats recommended",
+     "inputs": "6 × 5 m",
+     "outputs": "about 6.00 kg per coat for 30 m²"
+    },
+    {
+     "tool": "Pourla epoxy floor calculator",
+     "url": "https://pourlaepoxy.com/resin-calculator/epoxy-floor-calculator/",
+     "basis": "square feet → kits for one layer at a time; published rules: primer 150–200 sq ft/gal in 1.5-gallon kits mixed 2A:1B by weight, topcoat 100–120 sq ft/gal in 3-gallon kits mixed 2A:1B by volume",
+     "inputs": "400 sq ft primer and topcoat",
+     "outputs": "kit counts not captured by the test browser; published rules recorded from the page text"
+    }
+   ]
+  },
+  {
+   "id": "flooring-cost-estimator-bases",
+   "label": "What ranking flooring cost estimators multiply (observed executions)",
+   "status": "market_survey",
+   "source_name": "Live executions of ranking flooring cost estimators, 10 September 2026",
+   "source_url": "https://floorfreight.com/cost-calculator",
+   "verified_at": "2026-09-10",
+   "expires_at": "2027-03-10",
+   "sample_size": 6,
+   "scope": "Observed behaviour of public estimators on the day of the test, with the inputs recorded here. Merchant prices, tiers, freight thresholds and unit costs belong to their publishers and change without notice; they are cited as examples of a multiplication basis, never as Calculiva pricing. Lowe's and Home Depot pages could not be executed from the test environment (location gate, then access denied).",
+   "observations": [
+    {
+     "tool": "FloorFreight cost calculator",
+     "url": "https://floorfreight.com/cost-calculator",
+     "basis": "square feet × (1 + waste %) × catalog tier price per square foot; freight added by carton band",
+     "inputs": "12.5 × 12 ft, luxury vinyl plank, mid tier, 8 % waste",
+     "outputs": "material $873–$1,051 for 150 sq ft, about 8 cartons, freight $199, total $1,072–$1,250",
+     "published_rules": "default waste 8 % (options 12, 15, 20 %); freight $99 for 1–2 cartons, $199 for 3–10, free at $1,799 or more; installation labor excluded"
+    },
+    {
+     "tool": "Homewyse laminate installation cost",
+     "url": "https://www.homewyse.com/services/cost_to_install_laminate_flooring.html",
+     "basis": "unit costs by ZIP code applied to a purchase quantity that already includes overage, plus labor in hours",
+     "inputs": "ZIP 04769, 150 sq ft",
+     "outputs": "purchase quantity 161 sq ft; totals $1,007–$1,722; $6.71–$11.48 per sq ft; stated May 2026 national average $6.91–$11.81 per sq ft"
+    },
+    {
+     "tool": "Houzz Pro flooring calculator",
+     "url": "https://pro.houzz.com/houzz-pro/construction-calculators/flooring",
+     "basis": "material cost = area with waste × price per square foot; box count computed separately and not priced",
+     "inputs": "12.5 × 12 ft, 10 % waste, $6 per sq ft, hardwood",
+     "outputs": "165 sq ft with waste; 9 boxes at 20 sq ft default coverage or 10 boxes with 48 × 5 in planks; material $990 in both cases"
+    },
+    {
+     "tool": "Floor Daddy cost estimator",
+     "url": "https://floordaddy.com/flooring-calculator/",
+     "basis": "slider square feet × one flat rate per material, materials and labor combined, Arizona installer",
+     "inputs": "150 sq ft, hardwood",
+     "outputs": "$1,200 at $8.00 per sq ft; laminate $4.00, vinyl plank $5.00, tile $6.00, carpet $3.50 per sq ft"
+    },
+    {
+     "tool": "Omni Calculator flooring",
+     "url": "https://www.omnicalculator.com/construction/flooring",
+     "basis": "area × (1 + waste %) × price per unit area",
+     "inputs": "3 × 4 m, 5 % waste, 20 per m²",
+     "outputs": "12 m², 12.6 m², 252"
+    },
+    {
+     "tool": "SkyCiv flooring cost calculator",
+     "url": "https://skyciv.com/quick-calculators/flooring-cost-calculator/",
+     "basis": "area × (1 + waste %) × price per square foot, imperial only, rectangular rooms only",
+     "inputs": "11 × 12 ft, $5 per sq ft, 10 % waste",
+     "outputs": "132 sq ft, 145.2 sq ft, $726"
+    }
+   ],
+   "example_inputs": "All carton quotes, labor, removal and trim rates preloaded in the calculator are round hypothetical numbers for the arithmetic. They are not market prices and carry no source."
+  },
+  {
+   "id": "flooring-joint-checks",
+   "label": "Pergo Classics: example of product-specific plank checks",
+   "status": "market_survey",
+   "source_name": "Pergo Classics Installation Instructions, 03/2021, page 4, steps 5–6",
+   "source_url": "https://pdf.lowes.com/productdocuments/47daec0b-407e-4991-81de-582e5786a097/65848084.pdf",
+   "verified_at": "2026-09-10",
+   "expires_at": "2027-03-10",
+   "sample_size": 1,
+   "scope": "Specific Pergo Classics instructions, not all laminate, wood or vinyl. Numeric checks do not establish installation compliance. This source does not supply a minimum final-row width or final-piece length for this tool.",
+   "expansion_in": 0.375,
+   "minimum_starter_in": 8,
+   "minimum_adjacent_joint_in": 12,
+   "minimum_row_width_in": null,
+   "reuse_scope": "The instructions allow starting rows with pieces from a previous row while meeting the end-joint offset. Calculiva instead shows a planning-stage pairing schedule; it is not an installation sequence."
+  },
+  {
+   "id": "grout-coverage-tables",
+   "label": "Cement grout coverage as published by two manufacturers, and the joint model and powder density each table implies",
+   "status": "market_survey",
+   "source_name": "MAPEI Ultracolor Plus FA technical data sheet (Edition Date: August 28, 2026); LATICRETE PERMACOLOR Grout data sheet DS-250-0926",
+   "source_url": "https://cdnmedia.mapei.com/docs/librariesprovider67/products-documents/1_3000144_ultracolor-plus-fa_en-us_979a424a35724d82980fa0332f798319.pdf",
+   "verified_at": "2026-09-25",
+   "expires_at": "2027-03-25",
+   "scope": "Two cement-based grouts sold in the United States, as each maker tabulates its coverage by tile size and joint width. Tables transcribed from the PDF text; Calculiva keeps an archived copy of both PDFs as read and does not republish them. The implied density is derived here from each table, it is not a figure the makers print.",
+   "sample_size": 2,
+   "products": [
+    {
+     "id": "mapei-ucpfa",
+     "maker": "MAPEI",
+     "product": "Ultracolor Plus FA",
+     "url": "https://cdnmedia.mapei.com/docs/librariesprovider67/products-documents/1_3000144_ultracolor-plus-fa_en-us_979a424a35724d82980fa0332f798319.pdf",
+     "bags_lb": [
+      10,
+      25
+     ],
+     "joint_range_in": [
+      "1/16",
+      "3/4"
+     ],
+     "tds_date": "2026-08-28",
+     "table_10lb": [
+      {
+       "tile": "1\" x 1\" x 1/4\"",
+       "a_in": 1.0,
+       "b_in": 1.0,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 39,
+        "1/8": 20,
+        "3/16": 13,
+        "1/4": 10,
+        "3/8": 7,
+        "1/2": 5,
+        "5/8": 4,
+        "3/4": 4
+       }
+      },
+      {
+       "tile": "2\" x 2\" x 1/4\"",
+       "a_in": 2.0,
+       "b_in": 2.0,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 78,
+        "1/8": 39,
+        "3/16": 26,
+        "1/4": 20,
+        "3/8": 13,
+        "1/2": 10,
+        "5/8": 8,
+        "3/4": 7
+       }
+      },
+      {
+       "tile": "3\" x 3\" x 1/4\"",
+       "a_in": 3.0,
+       "b_in": 3.0,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 117,
+        "1/8": 59,
+        "3/16": 39,
+        "1/4": 30,
+        "3/8": 20,
+        "1/2": 15,
+        "5/8": 12,
+        "3/4": 10
+       }
+      },
+      {
+       "tile": "4\" x 8\" x 1/2\"",
+       "a_in": 4.0,
+       "b_in": 8.0,
+       "depth_in": 0.5,
+       "sqft_per_bag": {
+        "1/16": 104,
+        "1/8": 52,
+        "3/16": 35,
+        "1/4": 26,
+        "3/8": 18,
+        "1/2": 13,
+        "5/8": 11,
+        "3/4": 9
+       }
+      },
+      {
+       "tile": "4-1/4\" x 4-1/4\" x 1/4\"",
+       "a_in": 4.25,
+       "b_in": 4.25,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 165,
+        "1/8": 83,
+        "3/16": 55,
+        "1/4": 42,
+        "3/8": 28,
+        "1/2": 21,
+        "5/8": 17,
+        "3/4": 14
+       }
+      },
+      {
+       "tile": "6\" x 6\" x 1/4\"",
+       "a_in": 6.0,
+       "b_in": 6.0,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 233,
+        "1/8": 117,
+        "3/16": 78,
+        "1/4": 59,
+        "3/8": 39,
+        "1/2": 30,
+        "5/8": 24,
+        "3/4": 20
+       }
+      },
+      {
+       "tile": "6\" x 6\" x 1/2\"",
+       "a_in": 6.0,
+       "b_in": 6.0,
+       "depth_in": 0.5,
+       "sqft_per_bag": {
+        "1/16": 117,
+        "1/8": 59,
+        "3/16": 39,
+        "1/4": 30,
+        "3/8": 20,
+        "1/2": 15,
+        "5/8": 12,
+        "3/4": 10
+       }
+      },
+      {
+       "tile": "6\" x 24\" x 3/8\"",
+       "a_in": 6.0,
+       "b_in": 24.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 249,
+        "1/8": 125,
+        "3/16": 83,
+        "1/4": 63,
+        "3/8": 42,
+        "1/2": 32,
+        "5/8": 25,
+        "3/4": 21
+       }
+      },
+      {
+       "tile": "8\" x 8\" x 3/8\"",
+       "a_in": 8.0,
+       "b_in": 8.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 207,
+        "1/8": 104,
+        "3/16": 69,
+        "1/4": 52,
+        "3/8": 35,
+        "1/2": 26,
+        "5/8": 21,
+        "3/4": 18
+       }
+      },
+      {
+       "tile": "12\" x 12\" x 3/8\"",
+       "a_in": 12.0,
+       "b_in": 12.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 311,
+        "1/8": 156,
+        "3/16": 104,
+        "1/4": 78,
+        "3/8": 52,
+        "1/2": 39,
+        "5/8": 32,
+        "3/4": 26
+       }
+      },
+      {
+       "tile": "12\" x 24\" x 3/8\"",
+       "a_in": 12.0,
+       "b_in": 24.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 414,
+        "1/8": 207,
+        "3/16": 138,
+        "1/4": 104,
+        "3/8": 69,
+        "1/2": 52,
+        "5/8": 42,
+        "3/4": 35
+       }
+      },
+      {
+       "tile": "13\" x 13\" x 3/8\"",
+       "a_in": 13.0,
+       "b_in": 13.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 337,
+        "1/8": 169,
+        "3/16": 113,
+        "1/4": 85,
+        "3/8": 57,
+        "1/2": 43,
+        "5/8": 34,
+        "3/4": 29
+       }
+      },
+      {
+       "tile": "18\" x 18\" x 3/8\"",
+       "a_in": 18.0,
+       "b_in": 18.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 466,
+        "1/8": 233,
+        "3/16": 156,
+        "1/4": 117,
+        "3/8": 78,
+        "1/2": 59,
+        "5/8": 47,
+        "3/4": 39
+       }
+      },
+      {
+       "tile": "20\" x 20\" x 3/8\"",
+       "a_in": 20.0,
+       "b_in": 20.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 518,
+        "1/8": 259,
+        "3/16": 173,
+        "1/4": 130,
+        "3/8": 87,
+        "1/2": 65,
+        "5/8": 52,
+        "3/4": 44
+       }
+      },
+      {
+       "tile": "24\" x 24\" x 3/8\"",
+       "a_in": 24.0,
+       "b_in": 24.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 621,
+        "1/8": 311,
+        "3/16": 207,
+        "1/4": 156,
+        "3/8": 104,
+        "1/2": 78,
+        "5/8": 63,
+        "3/4": 52
+       }
+      },
+      {
+       "tile": "32\" x 32\" x 3/8\"",
+       "a_in": 32.0,
+       "b_in": 32.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 828,
+        "1/8": 414,
+        "3/16": 276,
+        "1/4": 207,
+        "3/8": 138,
+        "1/2": 104,
+        "5/8": 83,
+        "3/4": 69
+       }
+      }
+     ],
+     "table_25lb": [
+      {
+       "tile": "1\" x 1\" x 1/4\"",
+       "a_in": 1.0,
+       "b_in": 1.0,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 97,
+        "1/8": 49,
+        "3/16": 33,
+        "1/4": 25,
+        "3/8": 17,
+        "1/2": 13,
+        "5/8": 10,
+        "3/4": 9
+       }
+      },
+      {
+       "tile": "2\" x 2\" x 1/4\"",
+       "a_in": 2.0,
+       "b_in": 2.0,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 194,
+        "1/8": 97,
+        "3/16": 65,
+        "1/4": 49,
+        "3/8": 33,
+        "1/2": 25,
+        "5/8": 20,
+        "3/4": 17
+       }
+      },
+      {
+       "tile": "3\" x 3\" x 1/4\"",
+       "a_in": 3.0,
+       "b_in": 3.0,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 291,
+        "1/8": 146,
+        "3/16": 97,
+        "1/4": 73,
+        "3/8": 49,
+        "1/2": 37,
+        "5/8": 30,
+        "3/4": 25
+       }
+      },
+      {
+       "tile": "4\" x 8\" x 1/2\"",
+       "a_in": 4.0,
+       "b_in": 8.0,
+       "depth_in": 0.5,
+       "sqft_per_bag": {
+        "1/16": 259,
+        "1/8": 130,
+        "3/16": 87,
+        "1/4": 65,
+        "3/8": 44,
+        "1/2": 33,
+        "5/8": 26,
+        "3/4": 22
+       }
+      },
+      {
+       "tile": "4-1/4\" x 4-1/4\" x 1/4\"",
+       "a_in": 4.25,
+       "b_in": 4.25,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 413,
+        "1/8": 207,
+        "3/16": 138,
+        "1/4": 104,
+        "3/8": 69,
+        "1/2": 52,
+        "5/8": 42,
+        "3/4": 35
+       }
+      },
+      {
+       "tile": "6\" x 6\" x 1/4\"",
+       "a_in": 6.0,
+       "b_in": 6.0,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 582,
+        "1/8": 291,
+        "3/16": 194,
+        "1/4": 146,
+        "3/8": 97,
+        "1/2": 73,
+        "5/8": 59,
+        "3/4": 49
+       }
+      },
+      {
+       "tile": "6\" x 6\" x 1/2\"",
+       "a_in": 6.0,
+       "b_in": 6.0,
+       "depth_in": 0.5,
+       "sqft_per_bag": {
+        "1/16": 291,
+        "1/8": 146,
+        "3/16": 97,
+        "1/4": 73,
+        "3/8": 49,
+        "1/2": 37,
+        "5/8": 30,
+        "3/4": 25
+       }
+      },
+      {
+       "tile": "6\" x 24\" x 3/8\"",
+       "a_in": 6.0,
+       "b_in": 24.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 621,
+        "1/8": 311,
+        "3/16": 207,
+        "1/4": 156,
+        "3/8": 104,
+        "1/2": 78,
+        "5/8": 63,
+        "3/4": 52
+       }
+      },
+      {
+       "tile": "8\" x 8\" x 3/8\"",
+       "a_in": 8.0,
+       "b_in": 8.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 518,
+        "1/8": 259,
+        "3/16": 173,
+        "1/4": 130,
+        "3/8": 87,
+        "1/2": 65,
+        "5/8": 52,
+        "3/4": 44
+       }
+      },
+      {
+       "tile": "12\" x 12\" x 3/8\"",
+       "a_in": 12.0,
+       "b_in": 12.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 776,
+        "1/8": 388,
+        "3/16": 259,
+        "1/4": 194,
+        "3/8": 130,
+        "1/2": 97,
+        "5/8": 78,
+        "3/4": 65
+       }
+      },
+      {
+       "tile": "12\" x 24\" x 3/8\"",
+       "a_in": 12.0,
+       "b_in": 24.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 1035,
+        "1/8": 518,
+        "3/16": 345,
+        "1/4": 259,
+        "3/8": 173,
+        "1/2": 130,
+        "5/8": 104,
+        "3/4": 87
+       }
+      },
+      {
+       "tile": "13\" x 13\" x 3/8\"",
+       "a_in": 13.0,
+       "b_in": 13.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 841,
+        "1/8": 421,
+        "3/16": 281,
+        "1/4": 211,
+        "3/8": 141,
+        "1/2": 106,
+        "5/8": 85,
+        "3/4": 71
+       }
+      },
+      {
+       "tile": "18\" x 18\" x 3/8\"",
+       "a_in": 18.0,
+       "b_in": 18.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 1164,
+        "1/8": 582,
+        "3/16": 388,
+        "1/4": 291,
+        "3/8": 194,
+        "1/2": 146,
+        "5/8": 117,
+        "3/4": 97
+       }
+      },
+      {
+       "tile": "20\" x 20\" x 3/8\"",
+       "a_in": 20.0,
+       "b_in": 20.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 1294,
+        "1/8": 647,
+        "3/16": 432,
+        "1/4": 324,
+        "3/8": 216,
+        "1/2": 162,
+        "5/8": 130,
+        "3/4": 108
+       }
+      },
+      {
+       "tile": "24\" x 24\" x 3/8\"",
+       "a_in": 24.0,
+       "b_in": 24.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 1552,
+        "1/8": 776,
+        "3/16": 518,
+        "1/4": 388,
+        "3/8": 259,
+        "1/2": 194,
+        "5/8": 156,
+        "3/4": 130
+       }
+      },
+      {
+       "tile": "32\" x 32\" x 3/8\"",
+       "a_in": 32.0,
+       "b_in": 32.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 2069,
+        "1/8": 1035,
+        "3/16": 690,
+        "1/4": 518,
+        "3/8": 345,
+        "1/2": 259,
+        "5/8": 207,
+        "3/4": 173
+       }
+      }
+     ],
+     "model": {
+      "joints": "one tile length plus one tile width of joint per tile, crossings counted twice: lb per sq ft = rho × (L + W) × g × d / (L × W), inches",
+      "implied_lb_per_cuft": 98.5,
+      "fit": {
+       "cells": 128,
+       "median_lb_per_cuft": 98.5,
+       "p10": 96.0,
+       "p90": 98.9
+      },
+      "fit_25lb": {
+       "cells": 128,
+       "median_lb_per_cuft": 98.6,
+       "p10": 97.0,
+       "p90": 99.0
+      },
+      "depth": "the tile thickness printed in the table"
+     }
+    },
+    {
+     "id": "laticrete-permacolor",
+     "maker": "LATICRETE",
+     "product": "PERMACOLOR Grout",
+     "url": "https://cdnmdm.laticrete.com/Datasheet/NA/5600/Datasheet_NA_en_5600.pdf",
+     "bags_lb": [
+      8,
+      25
+     ],
+     "joint_range_in": [
+      "1/16",
+      "1/2"
+     ],
+     "other_rows": [
+      {
+       "tile": "1 x 1/4\" Penny Round",
+       "modeled": false,
+       "sqft_per_bag_8lb": {
+        "1/16": 27,
+        "1/8": 15,
+        "3/16": 11,
+        "1/4": 9,
+        "3/8": 7,
+        "1/2": 6
+       },
+       "sqft_per_bag_25lb": {
+        "1/16": 85,
+        "1/8": 46,
+        "3/16": 33,
+        "1/4": 27,
+        "3/8": 21,
+        "1/2": 17
+       }
+      }
+     ],
+     "table_8lb": [
+      {
+       "tile": "1\" x 1\" x 1/4\"",
+       "a_in": 1.0,
+       "b_in": 1.0,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 34,
+        "1/8": 19,
+        "3/16": 14,
+        "1/4": 11,
+        "3/8": 8,
+        "1/2": 7
+       }
+      },
+      {
+       "tile": "2\" x 2\" x 1/4\"",
+       "a_in": 2.0,
+       "b_in": 2.0,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 66,
+        "1/8": 34,
+        "3/16": 24,
+        "1/4": 19,
+        "3/8": 14,
+        "1/2": 11
+       }
+      },
+      {
+       "tile": "3\" x 3\" x 1/4\"",
+       "a_in": 3.0,
+       "b_in": 3.0,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 97,
+        "1/8": 50,
+        "3/16": 34,
+        "1/4": 27,
+        "3/8": 19,
+        "1/2": 15
+       }
+      },
+      {
+       "tile": "3\" x 6\" x 1/4\"",
+       "a_in": 3.0,
+       "b_in": 6.0,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 129,
+        "1/8": 66,
+        "3/16": 45,
+        "1/4": 35,
+        "3/8": 24,
+        "1/2": 19
+       }
+      },
+      {
+       "tile": "4\" x 4\" x 1/4\"",
+       "a_in": 4.0,
+       "b_in": 4.0,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 129,
+        "1/8": 66,
+        "3/16": 45,
+        "1/4": 34,
+        "3/8": 24,
+        "1/2": 19
+       }
+      },
+      {
+       "tile": "4 1/4\" x 4 1/4\" x 1/4\"",
+       "a_in": 4.25,
+       "b_in": 4.25,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 137,
+        "1/8": 70,
+        "3/16": 48,
+        "1/4": 36,
+        "3/8": 25,
+        "1/2": 20
+       }
+      },
+      {
+       "tile": "6\" x 6\" x 1/4\"",
+       "a_in": 6.0,
+       "b_in": 6.0,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 192,
+        "1/8": 97,
+        "3/16": 66,
+        "1/4": 50,
+        "3/8": 34,
+        "1/2": 27
+       }
+      },
+      {
+       "tile": "6\" x 24\" x 3/8\"",
+       "a_in": 6.0,
+       "b_in": 24.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 204,
+        "1/8": 103,
+        "3/16": 69,
+        "1/4": 53,
+        "3/8": 36,
+        "1/2": 27
+       }
+      },
+      {
+       "tile": "6\" x 36\" x 3/8\"",
+       "a_in": 6.0,
+       "b_in": 36.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 218,
+        "1/8": 110,
+        "3/16": 74,
+        "1/4": 56,
+        "3/8": 38,
+        "1/2": 29
+       }
+      },
+      {
+       "tile": "8\" x 8\" x 3/8\"",
+       "a_in": 8.0,
+       "b_in": 8.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 170,
+        "1/8": 86,
+        "3/16": 58,
+        "1/4": 44,
+        "3/8": 30,
+        "1/2": 23
+       }
+      },
+      {
+       "tile": "9\" x 36\" x 3/8\"",
+       "a_in": 9.0,
+       "b_in": 36.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 304,
+        "1/8": 153,
+        "3/16": 103,
+        "1/4": 78,
+        "3/8": 53,
+        "1/2": 40
+       }
+      },
+      {
+       "tile": "12\" x 12\" x 3/8\"",
+       "a_in": 12.0,
+       "b_in": 12.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 254,
+        "1/8": 128,
+        "3/16": 86,
+        "1/4": 65,
+        "3/8": 44,
+        "1/2": 33
+       }
+      },
+      {
+       "tile": "12\" x 24\" x 3/8\"",
+       "a_in": 12.0,
+       "b_in": 24.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 338,
+        "1/8": 170,
+        "3/16": 114,
+        "1/4": 86,
+        "3/8": 58,
+        "1/2": 44
+       }
+      },
+      {
+       "tile": "12\" x 48\" x 3/8\"",
+       "a_in": 12.0,
+       "b_in": 48.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 405,
+        "1/8": 204,
+        "3/16": 136,
+        "1/4": 103,
+        "3/8": 69,
+        "1/2": 53
+       }
+      },
+      {
+       "tile": "16\" x 16\" x 3/8\"",
+       "a_in": 16.0,
+       "b_in": 16.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 338,
+        "1/8": 170,
+        "3/16": 114,
+        "1/4": 86,
+        "3/8": 58,
+        "1/2": 44
+       }
+      },
+      {
+       "tile": "18\" x 18\" x 3/8\"",
+       "a_in": 18.0,
+       "b_in": 18.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 380,
+        "1/8": 191,
+        "3/16": 128,
+        "1/4": 96,
+        "3/8": 65,
+        "1/2": 49
+       }
+      },
+      {
+       "tile": "20\" x 20\" x 3/8\"",
+       "a_in": 20.0,
+       "b_in": 20.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 422,
+        "1/8": 212,
+        "3/16": 142,
+        "1/4": 107,
+        "3/8": 72,
+        "1/2": 54
+       }
+      },
+      {
+       "tile": "24\" x 24\" x 3/8\"",
+       "a_in": 24.0,
+       "b_in": 24.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 505,
+        "1/8": 254,
+        "3/16": 170,
+        "1/4": 12,
+        "3/8": 86,
+        "1/2": 65
+       }
+      },
+      {
+       "tile": "24\" x 48\" x 3/8\"",
+       "a_in": 24.0,
+       "b_in": 48.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 673,
+        "1/8": 338,
+        "3/16": 226,
+        "1/4": 170,
+        "3/8": 114,
+        "1/2": 86
+       }
+      },
+      {
+       "tile": "32\" x 32\" x 3/8\"",
+       "a_in": 32.0,
+       "b_in": 32.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 673,
+        "1/8": 338,
+        "3/16": 226,
+        "1/4": 170,
+        "3/8": 114,
+        "1/2": 86
+       }
+      },
+      {
+       "tile": "4\" x 8\" x 1/2\"",
+       "a_in": 4.0,
+       "b_in": 8.0,
+       "depth_in": 0.5,
+       "sqft_per_bag": {
+        "1/16": 85,
+        "1/8": 43,
+        "3/16": 30,
+        "1/4": 23,
+        "3/8": 16,
+        "1/2": 12
+       }
+      },
+      {
+       "tile": "6\" x 6\" x 1/2\"",
+       "a_in": 6.0,
+       "b_in": 6.0,
+       "depth_in": 0.5,
+       "sqft_per_bag": {
+        "1/16": 96,
+        "1/8": 49,
+        "3/16": 33,
+        "1/4": 25,
+        "3/8": 17,
+        "1/2": 13
+       }
+      },
+      {
+       "tile": "8\" x 8\" x 1/2\"",
+       "a_in": 8.0,
+       "b_in": 8.0,
+       "depth_in": 0.5,
+       "sqft_per_bag": {
+        "1/16": 127,
+        "1/8": 64,
+        "3/16": 43,
+        "1/4": 33,
+        "3/8": 22,
+        "1/2": 17
+       }
+      }
+     ],
+     "table_25lb": [
+      {
+       "tile": "1\" x 1\" x 1/4\"",
+       "a_in": 1.0,
+       "b_in": 1.0,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 104,
+        "1/8": 59,
+        "3/16": 42,
+        "1/4": 34,
+        "3/8": 26,
+        "1/2": 22
+       }
+      },
+      {
+       "tile": "2\" x 2\" x 1/4\"",
+       "a_in": 2.0,
+       "b_in": 2.0,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 206,
+        "1/8": 108,
+        "3/16": 75,
+        "1/4": 59,
+        "3/8": 42,
+        "1/2": 34
+       }
+      },
+      {
+       "tile": "3\" x 3\" x 1/4\"",
+       "a_in": 3.0,
+       "b_in": 3.0,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 304,
+        "1/8": 157,
+        "3/16": 108,
+        "1/4": 83,
+        "3/8": 59,
+        "1/2": 46
+       }
+      },
+      {
+       "tile": "3\" x 6\" x 1/4\"",
+       "a_in": 3.0,
+       "b_in": 6.0,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 403,
+        "1/8": 206,
+        "3/16": 141,
+        "1/4": 108,
+        "3/8": 75,
+        "1/2": 59
+       }
+      },
+      {
+       "tile": "4\" x 4\" x 1/4\"",
+       "a_in": 4.0,
+       "b_in": 4.0,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 403,
+        "1/8": 206,
+        "3/16": 140,
+        "1/4": 108,
+        "3/8": 75,
+        "1/2": 59
+       }
+      },
+      {
+       "tile": "4 1/4\" x 4 1/4\" x 1/4\"",
+       "a_in": 4.25,
+       "b_in": 4.25,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 427,
+        "1/8": 218,
+        "3/16": 149,
+        "1/4": 114,
+        "3/8": 79,
+        "1/2": 62
+       }
+      },
+      {
+       "tile": "6\" x 6\" x 1/4\"",
+       "a_in": 6.0,
+       "b_in": 6.0,
+       "depth_in": 0.25,
+       "sqft_per_bag": {
+        "1/16": 599,
+        "1/8": 304,
+        "3/16": 206,
+        "1/4": 157,
+        "3/8": 108,
+        "1/2": 83
+       }
+      },
+      {
+       "tile": "6\" x 24\" x 3/8\"",
+       "a_in": 6.0,
+       "b_in": 24.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 636,
+        "1/8": 322,
+        "3/16": 217,
+        "1/4": 164,
+        "3/8": 112,
+        "1/2": 86
+       }
+      },
+      {
+       "tile": "6\" x 36\" x 3/8\"",
+       "a_in": 6.0,
+       "b_in": 36.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 682,
+        "1/8": 344,
+        "3/16": 232,
+        "1/4": 176,
+        "3/8": 120,
+        "1/2": 91
+       }
+      },
+      {
+       "tile": "8\" x 8\" x 3/8\"",
+       "a_in": 8.0,
+       "b_in": 8.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 531,
+        "1/8": 268,
+        "3/16": 181,
+        "1/4": 137,
+        "3/8": 94,
+        "1/2": 72
+       }
+      },
+      {
+       "tile": "9\" x 36\" x 3/8\"",
+       "a_in": 9.0,
+       "b_in": 36.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 951,
+        "1/8": 479,
+        "3/16": 322,
+        "1/4": 243,
+        "3/8": 164,
+        "1/2": 125
+       }
+      },
+      {
+       "tile": "12\" x 12\" x 3/8\"",
+       "a_in": 12.0,
+       "b_in": 12.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 793,
+        "1/8": 400,
+        "3/16": 268,
+        "1/4": 203,
+        "3/8": 137,
+        "1/2": 105
+       }
+      },
+      {
+       "tile": "12\" x 24\" x 3/8\"",
+       "a_in": 12.0,
+       "b_in": 24.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 1055,
+        "1/8": 531,
+        "3/16": 356,
+        "1/4": 269,
+        "3/8": 181,
+        "1/2": 138
+       }
+      },
+      {
+       "tile": "12\" x 48\" x 3/8\"",
+       "a_in": 12.0,
+       "b_in": 48.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 1266,
+        "1/8": 636,
+        "3/16": 426,
+        "1/4": 322,
+        "3/8": 217,
+        "1/2": 164
+       }
+      },
+      {
+       "tile": "16\" x 16\" x 3/8\"",
+       "a_in": 16.0,
+       "b_in": 16.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 1055,
+        "1/8": 531,
+        "3/16": 356,
+        "1/4": 268,
+        "3/8": 181,
+        "1/2": 137
+       }
+      },
+      {
+       "tile": "18\" x 18\" x 3/8\"",
+       "a_in": 18.0,
+       "b_in": 18.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 1186,
+        "1/8": 596,
+        "3/16": 400,
+        "1/4": 301,
+        "3/8": 203,
+        "1/2": 154
+       }
+      },
+      {
+       "tile": "20\" x 20\" x 3/8\"",
+       "a_in": 20.0,
+       "b_in": 20.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 1317,
+        "1/8": 662,
+        "3/16": 443,
+        "1/4": 334,
+        "3/8": 225,
+        "1/2": 170
+       }
+      },
+      {
+       "tile": "24\" x 24\" x 3/8\"",
+       "a_in": 24.0,
+       "b_in": 24.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 1580,
+        "1/8": 793,
+        "3/16": 531,
+        "1/4": 400,
+        "3/8": 268,
+        "1/2": 203
+       }
+      },
+      {
+       "tile": "24\" x 48\" x 3/8\"",
+       "a_in": 24.0,
+       "b_in": 48.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 2104,
+        "1/8": 1055,
+        "3/16": 706,
+        "1/4": 531,
+        "3/8": 356,
+        "1/2": 269
+       }
+      },
+      {
+       "tile": "32\" x 32\" x 3/8\"",
+       "a_in": 32.0,
+       "b_in": 32.0,
+       "depth_in": 0.375,
+       "sqft_per_bag": {
+        "1/16": 2104,
+        "1/8": 1055,
+        "3/16": 705,
+        "1/4": 531,
+        "3/8": 356,
+        "1/2": 268
+       }
+      },
+      {
+       "tile": "4\" x 8\" x 1/2\"",
+       "a_in": 4.0,
+       "b_in": 8.0,
+       "depth_in": 0.5,
+       "sqft_per_bag": {
+        "1/16": 267,
+        "1/8": 136,
+        "3/16": 92,
+        "1/4": 70,
+        "3/8": 49,
+        "1/2": 38
+       }
+      },
+      {
+       "tile": "6\" x 6\" x 1/2\"",
+       "a_in": 6.0,
+       "b_in": 6.0,
+       "depth_in": 0.5,
+       "sqft_per_bag": {
+        "1/16": 300,
+        "1/8": 152,
+        "3/16": 103,
+        "1/4": 78,
+        "3/8": 54,
+        "1/2": 42
+       }
+      },
+      {
+       "tile": "8\" x 8\" x 1/2\"",
+       "a_in": 8.0,
+       "b_in": 8.0,
+       "depth_in": 0.5,
+       "sqft_per_bag": {
+        "1/16": 398,
+        "1/8": 201,
+        "3/16": 136,
+        "1/4": 103,
+        "3/8": 70,
+        "1/2": 54
+       }
+      }
+     ],
+     "model": {
+      "joints": "exact grid: joint area per tile = (L + g)(W + g) − L × W, over the tile plus joint",
+      "implied_lb_per_cuft": 97.5,
+      "fit": {
+       "cells": 138,
+       "median_lb_per_cuft": 97.5,
+       "p10": 96.5,
+       "p90": 98.7
+      },
+      "fit_25lb": {
+       "cells": 138,
+       "median_lb_per_cuft": 97.6,
+       "p10": 97.3,
+       "p90": 97.9
+      },
+      "depth": "the tile thickness printed in the table"
+     }
+    }
+   ],
+   "anomalies": [
+    {
+     "table": "laticrete_8lb",
+     "tile": "24\" x 24\" x 3/8\"",
+     "joint_in": "1/4",
+     "sqft_printed": 12,
+     "m2_printed": 11.9,
+     "wrong_column": "imperial",
+     "m2_as_sqft": 128.1,
+     "model_sqft": 128.0
+    },
+    {
+     "table": "laticrete_25lb",
+     "tile": "12\" x 48\" x 3/8\"",
+     "joint_in": "1/8",
+     "sqft_printed": 636,
+     "m2_printed": 591.0,
+     "wrong_column": "metric",
+     "m2_as_sqft": null,
+     "model_sqft": 637.0
+    },
+    {
+     "table": "laticrete_25lb",
+     "tile": "8\" x 8\" x 1/2\"",
+     "joint_in": "1/2",
+     "sqft_printed": 54,
+     "m2_printed": 54.0,
+     "wrong_column": "metric",
+     "m2_as_sqft": null,
+     "model_sqft": 53.9
+    }
+   ],
+   "derived": {
+    "rule": "For every table cell, implied density = bag weight / (sq ft covered × joint volume per sq ft). Joint volume per sq ft = 144 × (L + W) × g × d / (L × W) cu in for the simple model, 144 × ((L + g)(W + g) − L × W) / ((L + g)(W + g)) × d for the exact grid. Median over the cells; p10-p90 shown.",
+    "note": "Both makers land within 1 lb/cu ft of each other (about 97.5 to 98.5 lb of powder per cubic foot of joint) but on different joint models; the simple model counts each crossing twice and grows past the exact grid as joints widen on small tiles."
+   }
+  },
+  {
+   "id": "grout-joint-practice",
+   "label": "Sanded or unsanded cement grout by joint width, caulk instead of grout at changes of plane, and joint width against tile variation, as TCNA answers them",
+   "status": "convention",
+   "source_name": "Tile Council of North America (TCNA), Resource Center FAQ: Grout",
+   "source_url": "https://tcnatile.com/resource-center/faq/grout/",
+   "verified_at": "2026-09-25",
+   "expires_at": "",
+   "scope": "Answers published by TCNA on its grout FAQ page, read on the verification date. TCNA frames the joint-width rule as common opinion (\"Many people feel\"); it is quoted as such, not as a standard. Product instructions govern.",
+   "sample_size": 1,
+   "sanded_from_joint_in": 0.125,
+   "caulk_at": "changes in substrate or backing surface, such as the joint between walls and floor",
+   "joint_vs_variation": {
+    "average_variation_multiple": 3,
+    "maximum_variation_multiple": 2,
+    "framed_as": "Many people feel"
+   }
+  },
+  {
+   "id": "gym-flooring-observations",
+   "label": "Gym flooring estimators: what they multiply, observed executions",
+   "status": "market_survey",
+   "source_name": "Live executions of ranking gym flooring calculators, 10 September 2026 (GrytFit layout visualizer as reference)",
+   "source_url": "https://grytfit.com/pages/flooring-calculator-new",
+   "verified_at": "2026-09-10",
+   "expires_at": "2027-03-10",
+   "sample_size": 6,
+   "scope": "Behaviour of public estimators on the day tested, with the inputs recorded. Mat sizes, interlock losses, set sizes and weights belong to the products actually quoted; the 4 × 6 ft mat, 24-inch tile with a 1-inch interlock loss, sets of four and the 4 × 25 ft roll preloaded in the calculator are examples drawn from these listings, not Calculiva conventions. Prices, stock and freight are not recorded.",
+   "observations": [
+    {
+     "tool": "GrytFit floor layout visualizer",
+     "url": "https://grytfit.com/pages/flooring-calculator-new",
+     "basis": "room in ft and in, catalog product with its actual size, layout optimized / horizontal / vertical / symmetrical; totals mats, edge pieces, waste, subtotal, downloadable plan",
+     "inputs": "20 × 15 ft, Interlocking 6x4 Rubber Gym Mat (actual 46 × 69 in); Heavy Duty 4x4 tile (45 × 45 in); 22.5 × 22.5 in tile",
+     "outputs": "mat: 14 mats + 11 edge pieces, waste 19.4 sq ft (6.3 %), vertical; horizontal 17 mats; symmetrical 18 mats, 0 edge pieces, 24.4 % waste. 4x4 tile: 22 tiles, 3.5 % waste; symmetrical 24. 22.5 in tile: 88 tiles, 3.5 %"
+    },
+    {
+     "tool": "Cashmans gym mat calculator",
+     "url": "https://www.cashmans.com/pages/gym-mat-calculator",
+     "basis": "area width × length in feet ÷ one 4 × 6 ft mat, rounded up, times the mat price",
+     "inputs": "20 × 15 ft, Stamina Rubber Mat",
+     "outputs": "13 mats × $84.99 = $1,104.87"
+    },
+    {
+     "tool": "MuscleSquad gym floor planner (embedded app)",
+     "url": "https://musclesquad.com/pages/gym-floor-calculator",
+     "basis": "metric room (rectangle, L, T), tile 1 × 1, 1 × 0.5 or 0.5 × 0.5 m, grid / brick / most efficient, start at centre edge, centre tile or wall; pairs opposite-edge offcuts",
+     "inputs": "6.1 × 4.6 m, 1 × 1 m, grid, centre edge",
+     "outputs": "20 full tiles, 8 cut pieces (0.55 × 1.00 m), 0 paired offcuts, 28 tiles to buy, coverage 24.4 m² for a 28.06 m² room (0.6 m left uncovered in this mode); 'most efficient' 15 full, 20 cut, 35 tiles, 28.06 m² covered"
+    },
+    {
+     "tool": "Living.Fit flooring calculator",
+     "url": "https://www.living.fit/pages/flooring-calculator",
+     "basis": "width and length in feet, optional 5 % overage, tiles and sets of four, interlock loss of each product considered",
+     "inputs": "page read",
+     "outputs": "tile and set counts; the test browser was redirected before the form could be executed"
+    },
+    {
+     "tool": "Greatmats quick flooring calculator (guide)",
+     "url": "https://www.greatmats.com/how-to-use-quick-flooring-calculater.php",
+     "basis": "per product page: area, optional 5 % overage, interlock loss from the product specifications",
+     "inputs": "guide example",
+     "outputs": "a 2 × 2 ft puzzle mat on a 10 × 10 ft area returns 31 tiles rather than 25 because of interlock loss"
+    },
+    {
+     "tool": "Alpine Fitness flooring calculator",
+     "url": "https://www.alpinefitness.com/gym-flooring-calculator/",
+     "basis": "quote request form (embedded lead form) with product ranges; laser cutting and CAD drawing approval offered",
+     "inputs": "page read",
+     "outputs": "no quantity computed on the page; tile sizes 4 × 4 and 6 × 4 ft, thicknesses 3/8, 1/2, 3/4 in stated"
+    }
+   ]
+  },
+  {
+   "id": "hardwood-racking-guidance",
+   "label": "Somerset SolidPlus racking example and random-length disclosure",
+   "status": "market_survey",
+   "source_name": "Somerset SolidPlus Engineered Installation, racking paragraph",
+   "source_url": "https://www.somersetfloors.com/engineered-installation",
+   "verified_at": "2026-09-10",
+   "expires_at": "2027-03-10",
+   "sample_size": 2,
+   "scope": "Example applies to the cited Somerset SolidPlus engineered guide, not all hardwood. The guide generally calls for an adjacent-row end-joint stagger at least twice flooring width and instructs racking to avoid stair steps and H joints. This planner checks adjacent seams and H alignments; it does not inspect all repeating visual patterns.",
+   "example_joint_width_multiplier": 2,
+   "additional_sources": [
+    {
+     "name": "Somerset Character collection dimensions",
+     "url": "https://www.somersetfloors.com/product-collection/collection/11",
+     "note": "Lists random lengths up to6.5feet for solid flooring; a maximum is not a count by length. No carton distribution inferred."
+    }
+   ],
+   "default_inputs": "Room, inventory lengths, counts and kerf are hypothetical test inputs, not retail products or universal allowances."
+  },
+  {
+   "id": "herringbone-format-guidance",
+   "label": "Rectangular herringbone format examples",
+   "status": "market_survey",
+   "source_name": "MSI Patterned Floor Tile Tool — Herringbone",
+   "source_url": "https://www.msisurfaces.com/patterned-floor-tile-tool/",
+   "verified_at": "2026-09-10",
+   "expires_at": "2027-03-10",
+   "sample_size": 1,
+   "scope": "Manufacturer pattern selector includes nominal 4 by 12 inch tile under herringbone. This demonstrates a non-1:2 rectangular example; it does not certify every product or nominal dimension for installation.",
+   "example_width_in": 4,
+   "example_length_in": 12,
+   "notes": "Live tool:10x12ft,4x12in,0% waste returned120sqft and360tiles. Calculiva uses actual measured tile faces, not this aggregate area count. No universal waste percentage or joint width derived from this source. Engine coverage is separately tested for ratios2,3,4 and2.5 at zero joint."
+  },
+  {
+   "id": "laminate-layer-guidance",
+   "label": "Pergo Classics layer selection example",
+   "status": "market_survey",
+   "source_name": "Pergo Classics installation instructions, March 2021, page 2",
+   "source_url": "https://pdf.lowes.com/productdocuments/47daec0b-407e-4991-81de-582e5786a097/65848084.pdf",
+   "verified_at": "2026-09-10",
+   "expires_at": "2027-03-10",
+   "sample_size": 1,
+   "scope": "Conditional example for Pergo Classics covered by this document. Attached-pad flooring: do not add another cushion layer. Unattached product: appropriate single underlayment. Concrete membrane overlap at least eight inches in this guide. This does not establish universal instructions or authorize a particular assembly.",
+   "membrane_overlap_in": 8,
+   "attached_pad_additional_cushion": false,
+   "example_dimensions": "All roll and room defaults in the calculator are hypothetical geometry inputs, not product listings."
+  },
+  {
+   "id": "lowes-rectangular-tile",
+   "label": "Lowe’s rectangular tile: verified faces and sales units",
+   "status": "market_survey",
+   "source_name": "Lowe’s live product specifications",
+   "source_url": "https://www.lowes.com/pd/Satori-Statuario-Polished-Porcelain-Common-Actual-23-62-in-x-11-81-in/1002802304",
+   "verified_at": "2026-09-10",
+   "expires_at": "2027-03-10",
+   "sample_size": 2,
+   "scope": "Two specific US product records, inspected in the browser with Specifications expanded. Dimensions and package declarations only. No price or stock promises. Store context was already Presque Isle 04769. Recheck the purchased package and measured tile before cutting.",
+   "products": [
+    {
+     "id": "774313",
+     "model": "1001-0237-0",
+     "name": "Satori Statuario polished 12 × 24",
+     "source_url": "https://www.lowes.com/pd/Satori-Statuario-Polished-Porcelain-Common-Actual-23-62-in-x-11-81-in/1002802304",
+     "verified_at": "2026-09-10",
+     "actual_width_in": 11.81,
+     "actual_length_in": 23.62,
+     "nominal_width_in": 12,
+     "nominal_length_in": 24,
+     "sold_as": "Piece",
+     "pack_quantity": 1,
+     "coverage_sqft": 1.93,
+     "suggested_grout_in": 0.0625
+    },
+    {
+     "id": "2240404",
+     "model": "1001-0280-0",
+     "name": "Satori Windsor white matte 12 × 24",
+     "source_url": "https://www.lowes.com/pd/Satori-8-Pack-Windsor-White-Matte-Porcelain-12-in-x-24-in-Matte-Porcelain-Floor-and-Wall-Tile/1002658170",
+     "verified_at": "2026-09-10",
+     "actual_width_in": 11.81,
+     "actual_length_in": 23.62,
+     "nominal_width_in": 12,
+     "nominal_length_in": 24,
+     "sold_as": "Carton",
+     "pack_quantity": 8,
+     "coverage_sqft": 15.44,
+     "suggested_grout_in": 0.0625
+    }
+   ]
+  },
+  {
+   "id": "lumber-nominal-actual-softwood",
+   "label": "Nominal and actual dimensions of softwood boards sold in the United States",
+   "status": "standard",
+   "source_name": "PS 20, American Softwood Lumber Standard (NIST) — table \"Boards dressed, S4S, dry\" as reproduced by the Southern Forest Products Association",
+   "source_url": "https://www.southernpine.com/resources/specifying-southern-pine-lumber/standard-sizing/",
+   "standard_url": "https://www.nist.gov/document/ps-20-25-final",
+   "verified_at": "2026-09-09",
+   "expires_at": null,
+   "scope": "softwood boards surfaced four sides (S4S) and dried, sold at retail in the United States. DOES NOT APPLY to MDF, PVC or composite moldings: see trim-nominal-actual-mdf.",
+   "sample_size": null,
+   "note": "The current edition of the standard is PS 20-25 (effective January 2025, supersedes PS 20-20 Revision 1); its Table 3, read on 2026-10-01, gives the same inch values as the reproduced table. The reproduction rounds metric equivalents to the millimeter (1-1/2 in appears as 38 mm), PS 20-25 gives them to the tenth (38.1 mm). The engine converts from inches at full precision: 1.5 in = 38.1 mm.",
+   "thickness": [
+    {
+     "nominal_in": 1,
+     "actual_in": 0.75,
+     "actual_in_label": "3/4",
+     "standard_mm": 19
+    },
+    {
+     "nominal_in": 1.25,
+     "actual_in": 1.0,
+     "actual_in_label": "1",
+     "standard_mm": 25
+    },
+    {
+     "nominal_in": 1.5,
+     "actual_in": 1.25,
+     "actual_in_label": "1-1/4",
+     "standard_mm": 32
+    }
+   ],
+   "width": [
+    {
+     "nominal_in": 2,
+     "actual_in": 1.5,
+     "actual_in_label": "1-1/2",
+     "standard_mm": 38
+    },
+    {
+     "nominal_in": 3,
+     "actual_in": 2.5,
+     "actual_in_label": "2-1/2",
+     "standard_mm": 64
+    },
+    {
+     "nominal_in": 4,
+     "actual_in": 3.5,
+     "actual_in_label": "3-1/2",
+     "standard_mm": 89
+    },
+    {
+     "nominal_in": 5,
+     "actual_in": 4.5,
+     "actual_in_label": "4-1/2",
+     "standard_mm": 114
+    },
+    {
+     "nominal_in": 6,
+     "actual_in": 5.5,
+     "actual_in_label": "5-1/2",
+     "standard_mm": 140
+    },
+    {
+     "nominal_in": 7,
+     "actual_in": 6.5,
+     "actual_in_label": "6-1/2",
+     "standard_mm": 165
+    },
+    {
+     "nominal_in": 8,
+     "actual_in": 7.25,
+     "actual_in_label": "7-1/4",
+     "standard_mm": 184
+    },
+    {
+     "nominal_in": 9,
+     "actual_in": 8.25,
+     "actual_in_label": "8-1/4",
+     "standard_mm": 210
+    },
+    {
+     "nominal_in": 10,
+     "actual_in": 9.25,
+     "actual_in_label": "9-1/4",
+     "standard_mm": 235
+    },
+    {
+     "nominal_in": 11,
+     "actual_in": 10.25,
+     "actual_in_label": "10-1/4",
+     "standard_mm": 260
+    },
+    {
+     "nominal_in": 12,
+     "actual_in": 11.25,
+     "actual_in_label": "11-1/4",
+     "standard_mm": 286
+    }
+   ],
+   "over_12_rule": "above 12 in nominal, subtract 3/4 in (19 mm) from the nominal width"
+  },
+  {
+   "id": "mosaic-sheet-planning",
+   "label": "Mosaic sheet and chip planning",
+   "status": "convention",
+   "source_name": "MSI mosaic and paper/film faced installation guides",
+   "source_url": "https://cdn.msisurfaces.com/files/flyers/mosaic-installation-guide-decorative-accents-flyer.pdf",
+   "sheet_source_url": "https://cdn.msisurfaces.com/files/flyers/palisades-installation-guide.pdf",
+   "verified_at": "2026-09-10",
+   "expires_at": "2027-03-10",
+   "scope": "Measured rectangular chips arranged in a uniform rectangular sheet. MSI calls for sheet inspection, alignment and attention to transitions; cutting guidance distinguishes the mounting system from the tile itself. No universal chip format, seam, substrate, grout type or cutting method is prescribed here.",
+   "notes": "Default25x13in,one-inch chips,12rows/columns,zero joints,four sheets per box and zero reserve are a geometry exercise, not an SKU or installation recommendation. Sheet face dimensions are derived from chip faces and internal joints; outside mesh overhang is excluded. Backing-only is a geometric classification, not approval to cut a particular support."
+  },
+  {
+   "id": "mulch-bag-observations",
+   "label": "Bagged mulch sizes and label instructions of one product line, and what the five ranking mulch calculators assume",
+   "status": "market_survey",
+   "source_name": "Scotts Nature Scapes product page; five mulch calculators ranking in the United States",
+   "source_url": "https://scottsmiraclegro.com/en-us/brands/scotts/products/browse-all-scotts-products/scotts-nature-scapes-color-enhanced-mulch/88559442.html",
+   "verified_at": "2026-09-25",
+   "expires_at": "2027-03-25",
+   "scope": "What one bagged mulch line offered and stated on 25 September 2026, and what the five tools ranking first for 'mulch calculator' in the United States assume. Sizes are those offered on the page read; no claim is made that they are the only sizes on sale. No price is recorded.",
+   "sample_size": 6,
+   "product": {
+    "name": "Scotts Nature Scapes Color Enhanced Mulch",
+    "sizes_cuft": [
+     1.5,
+     2
+    ],
+    "read_as": "size selector on the manufacturer page: 1.5 CF, 2 CF"
+   },
+   "observations": [
+    {
+     "tool": "LandscapeCalculator.com",
+     "url": "https://www.landscapecalculator.com/calculators/mulch",
+     "basis": "one area; depth of 1, 2, 3 or 4 inches; cubic yards; bags of 2 and 3 cubic feet"
+    },
+    {
+     "tool": "Calculator.net",
+     "url": "https://www.calculator.net/mulch-calculator.html",
+     "basis": "area rows in several units; price per cubic foot, cubic yard, liter or bag",
+     "stated": "Generally, a 2 to 4 inches (5 to 10 cm) layer of mulch will yield benefits to the soil without being too thick",
+     "check": "No source is given for the depth."
+    },
+    {
+     "tool": "The Home Depot",
+     "url": "https://www.homedepot.com/calculator/mulch",
+     "basis": "length x width x depth or square footage x depth; 1.5 cu. ft. bags",
+     "stated": "3 in. recommended"
+    },
+    {
+     "tool": "Mulch Center",
+     "url": "https://mulchcenter.com/yardage-calculator/",
+     "basis": "rectangle or circle",
+     "stated": "Factor in a small difference in the final calculation for the size of the tree trunk.",
+     "check": "The trunk is not computed."
+    },
+    {
+     "tool": "Mahoney's Garden Center",
+     "url": "https://mahoneysgarden.com/calculator/",
+     "basis": "bagged and by-the-yard calculators; depth typically 2-3 inches",
+     "stated": "A 100 sq ft bed at 3 inches deep needs about 0.75 cubic yards, or roughly 13.5 bags of mulch if each bag contains 2 cubic feet.",
+     "check": "100 sq ft x 3/12 ft = 25 cubic feet: 0.93 cubic yard and 12.5 bags of 2 cubic feet. The two figures stated disagree with the geometry and with each other (0.75 cubic yard is 20.25 cubic feet, 10.1 bags)."
+    }
+   ]
+  },
+  {
+   "id": "mulch-depth-guidance",
+   "label": "Landscape mulch: depth, distance from the trunk, size of the tree ring and topping up, as published by five extension services and two tree programs",
+   "status": "convention",
+   "source_name": "Penn State Extension; University of Maryland Extension; Iowa State University Extension; UC Marin Master Gardeners (UC ANR); NCUFC; Casey Trees; City of Maple Grove, Minnesota",
+   "source_url": "https://extension.psu.edu/mulching-landscape-trees/",
+   "verified_at": "2026-09-25",
+   "expires_at": "",
+   "scope": "Organic landscape mulch around trees, shrubs and in beds, for a homeowner in the United States. The publishers disagree; each figure belongs to the publisher named, read on the verification date. No figure is a standard. Playground surfacing depths are a separate record (CPSC).",
+   "sample_size": 7,
+   "publishers": [
+    {
+     "id": "psu",
+     "publisher": "Penn State Extension",
+     "url": "https://extension.psu.edu/mulching-landscape-trees/",
+     "depth_in": [
+      2,
+      4
+     ],
+     "fine_depth_in": [
+      1,
+      2
+     ],
+     "trunk_gap": "keep all mulch material away from the trunk; allow the root flare to show",
+     "ring": "preferably to the outermost edge of the tree's canopy, referred to as the “drip line”"
+    },
+    {
+     "id": "umd",
+     "publisher": "University of Maryland Extension",
+     "url": "https://extension.umd.edu/resource/mulching-trees-and-shrubs",
+     "depth_in": [
+      1,
+      3
+     ],
+     "trunk_gap_in": 3,
+     "by_material_in": {
+      "bark": [
+       1,
+       3
+      ],
+      "wood chips": [
+       1,
+       3
+      ],
+      "sawdust": [
+       1,
+       1
+      ],
+      "pine needles": [
+       2,
+       3
+      ],
+      "grass clippings": [
+       1,
+       2
+      ],
+      "leaves": [
+       2,
+       3
+      ],
+      "compost": [
+       1,
+       1
+      ],
+      "gravel, stone, lava rock": [
+       1,
+       1
+      ]
+     }
+    },
+    {
+     "id": "isu",
+     "publisher": "Iowa State University Extension",
+     "url": "https://yardandgarden.extension.iastate.edu/how-to/using-mulch-garden",
+     "depth_in": [
+      2,
+      4
+     ]
+    },
+    {
+     "id": "ucm",
+     "publisher": "UC Marin Master Gardeners (UC ANR)",
+     "url": "https://ucanr.edu/site/uc-marin-master-gardeners/applying-mulch",
+     "trunk_gap_in": [
+      6,
+      12
+     ],
+     "fine_depth_max_in": 2,
+     "house_gap_ft": 5
+    },
+    {
+     "id": "ncufc",
+     "publisher": "NCUFC",
+     "url": "https://www.ncufc.org/proper-mulching-for-trees.php",
+     "depth_in": [
+      2,
+      4
+     ],
+     "tree_depth_in": [
+      2,
+      3
+     ],
+     "trunk_gap_in": [
+      1,
+      2
+     ],
+     "ring_min_ft": [
+      2,
+      3
+     ],
+     "ring_radius_by_tree_ft": {
+      "small": 3,
+      "medium": 8,
+      "large": 12
+     }
+    },
+    {
+     "id": "casey",
+     "publisher": "Casey Trees",
+     "url": "https://caseytrees.org/2024/05/mulching-dos-and-donts/",
+     "rule_333": {
+      "depth_in": 3,
+      "radius_ft": 3,
+      "trunk_gap_in": 3
+     }
+    },
+    {
+     "id": "maplegrove",
+     "publisher": "City of Maple Grove, Minnesota",
+     "url": "https://www.maplegrovemn.gov/DocumentCenter/View/1996/How-to-apply-mulch-around-trees-PDF",
+     "rule_333": {
+      "depth_in": 3,
+      "radius_ft": 3,
+      "trunk_gap_in": 3
+     }
+    }
+   ]
+  },
+  {
+   "id": "painted-paper-wallpaper-observations",
+   "label": "Painted Paper roll formats, prices, repeats and the on-page estimator, observed",
+   "status": "market_survey",
+   "source_name": "paintedpaper.com product pages, product JSON, measuring guide, FAQ and the estimator script hc-custom.js, 10 September 2026",
+   "source_url": "https://paintedpaper.com/products/odette-arboretum-wallpaper",
+   "verified_at": "2026-09-10",
+   "expires_at": "2026-12-10",
+   "sample_size": 4,
+   "scope": "Formats, prices and estimator rules as published by Painted Paper on the day read. Prices are the list prices of the four products read, identical across them; a sale code was advertised site-wide and is not applied. The 4-inch trim allowance used in the worked examples is Calculiva's exercise value, not a Painted Paper figure; the +28-inch allowance is the vendor's.",
+   "formats": [
+    {
+     "variant": "24\"W x 13'L Roll",
+     "width_in": 24,
+     "length_ft": 13,
+     "length_in": 156,
+     "coverage_sqft": 26
+    },
+    {
+     "variant": "24\"W x 27'L Roll",
+     "width_in": 24,
+     "length_ft": 27,
+     "length_in": 324,
+     "coverage_sqft": 54
+    },
+    {
+     "variant": "8.5\" x 10\" Sample",
+     "price_usd": 4.5
+    },
+    {
+     "variant": "24\" x 36\" Preview Panel",
+     "price_usd_by_material": {
+      "Premium Peel & Stick": 43,
+      "Traditional": 46,
+      "Pre-Pasted": 49
+     }
+    }
+   ],
+   "prices_usd": [
+    {
+     "roll": "13 ft",
+     "material": "Premium Peel & Stick",
+     "price": 159.99
+    },
+    {
+     "roll": "13 ft",
+     "material": "Traditional",
+     "price": 208.99
+    },
+    {
+     "roll": "13 ft",
+     "material": "Pre-Pasted",
+     "price": 214.99
+    },
+    {
+     "roll": "27 ft",
+     "material": "Premium Peel & Stick",
+     "price": 319.99
+    },
+    {
+     "roll": "27 ft",
+     "material": "Traditional",
+     "price": 368.99
+    },
+    {
+     "roll": "27 ft",
+     "material": "Pre-Pasted",
+     "price": 374.99
+    }
+   ],
+   "products_read": [
+    {
+     "name": "Odette Arboretum Wallpaper",
+     "url": "https://paintedpaper.com/products/odette-arboretum-wallpaper",
+     "repeat_in": 24,
+     "json_updated_at": "2026-09-10T10:15:59-05:00"
+    },
+    {
+     "name": "Luca Bloom Wallpaper",
+     "url": "https://paintedpaper.com/products/luca-bloom-wallpaper",
+     "repeat_in": 24,
+     "json_updated_at": "2026-09-10T10:15:59-05:00"
+    },
+    {
+     "name": "Cressida Wallpaper",
+     "url": "https://paintedpaper.com/products/cressida-wallpaper",
+     "repeat_in": 24,
+     "json_updated_at": "2026-09-10T10:15:59-05:00"
+    },
+    {
+     "name": "Margo Fruit Floral Wallpaper",
+     "url": "https://paintedpaper.com/products/margo-fruit-floral-wallpaper",
+     "repeat_in": 48,
+     "json_updated_at": "2026-09-10T10:15:59-05:00"
+    }
+   ],
+   "rules_published": [
+    {
+     "rule": "Rolls come in two sizes only, 24 in × 13 ft and 24 in × 27 ft; no custom sizing.",
+     "url": "https://paintedpaper.com/pages/faq"
+    },
+    {
+     "rule": "Measure the wall's total height and width; for walls with doors or windows measure the total regardless of openings; for several walls use the highest point of the room and add the widths.",
+     "url": "https://paintedpaper.com/pages/how-to-measure"
+    },
+    {
+     "rule": "Designs with a 48-inch repeat require a minimum of 2 rolls to print the full pattern (cart notice).",
+     "url": "https://paintedpaper.com/products/margo-fruit-floral-wallpaper"
+    },
+    {
+     "rule": "Estimator height limit: 31 ft 2 in (9.52 m).",
+     "url": "https://paintedpaper.com/products/odette-arboretum-wallpaper"
+    },
+    {
+     "rule": "Estimator disclaimer: recommendations use the square footage of the space; the quantity can vary with match type and repeat.",
+     "url": "https://paintedpaper.com/products/odette-arboretum-wallpaper"
+    }
+   ],
+   "estimator": {
+    "script_url": "https://paintedpaper.com/cdn/shop/t/30/assets/hc-custom.js",
+    "read_at": "2026-09-10",
+    "rule": "drops = sum over walls of ceil(wall width in inches / 24); drop length = wall height + 28 inches; drops per roll = floor(roll length / drop length) with roll length 156 or 324 inches; sets = ceil(drops / drops per roll), or drops × ceil(drop length / roll length) when a drop is longer than the roll; rolls = sets + floor(sets × 0.1). The pattern repeat is not read.",
+    "executions": [
+     {
+      "inputs": "12 ft wide, 8 ft high, 13 ft roll",
+      "output": 6
+     },
+     {
+      "inputs": "12 ft wide, 8 ft high, 27 ft roll",
+      "output": 3
+     },
+     {
+      "inputs": "12 ft wide, 9 ft high, 13 ft roll",
+      "output": 6
+     },
+     {
+      "inputs": "12 ft wide, 9 ft high, 27 ft roll",
+      "output": 3
+     },
+     {
+      "inputs": "10 ft wide, 8 ft high, 13 ft roll",
+      "output": 5
+     },
+     {
+      "inputs": "10 ft wide, 8 ft high, 27 ft roll",
+      "output": 3
+     },
+     {
+      "inputs": "20 ft wide, 8 ft 6 in high, 27 ft roll",
+      "output": 5
+     },
+     {
+      "inputs": "4 ft wide, 8 ft high, 13 ft roll",
+      "output": 2
+     },
+     {
+      "inputs": "2 ft wide, 8 ft high, 13 ft roll",
+      "output": 1
+     },
+     {
+      "inputs": "36 ft wide, 10 ft high, 27 ft roll",
+      "output": 9
+     },
+     {
+      "inputs": "36 ft wide, 8 ft high, 13 ft roll",
+      "output": 19
+     },
+     {
+      "inputs": "36 ft wide, 8 ft high, 27 ft roll",
+      "output": 9
+     }
+    ]
+   }
+  },
+  {
+   "id": "playground-surfacing-cpsc",
+   "label": "Loose-fill playground surfacing: minimum depths by equipment height, compression of the initial fill, and how far the surfacing extends",
+   "status": "standard",
+   "source_name": "U.S. Consumer Product Safety Commission, Outdoor Home Playground Safety Handbook (Publication 324) and Public Playground Safety Handbook (Publication 325)",
+   "source_url": "https://www.cpsc.gov/s3fs-public/324.pdf",
+   "verified_at": "2026-09-25",
+   "expires_at": "",
+   "scope": "Wood mulch or wood chips used as protective surfacing under home play equipment in the United States. The home handbook is the reference; the public handbook is quoted for the 25 percent compression rule and its table. Equipment taller than 8 feet, rubber mulch, sand, pea gravel and unitary mats are outside what the calculator models.",
+   "sample_size": 2,
+   "home_handbook": {
+    "publication": 324,
+    "url": "https://www.cpsc.gov/s3fs-public/324.pdf",
+    "file_modified": "2025-06-11",
+    "loose_fill": {
+     "wood_mulch_chips_max_equipment_ft": 8,
+     "maintained_depth_in": 9,
+     "initial_fill_in": 12,
+     "low_equipment_ft": 4,
+     "low_equipment_min_depth_in": 6,
+     "low_equipment_initial_fill_note": "The home handbook gives no first fill for the 6-inch case; Calculiva derives 8 inches from the public handbook's 'at least 25%' compression (6 / 0.75)."
+    },
+    "extent": {
+     "all_directions_ft": 6,
+     "swing_front_back_multiple_of_top_bar": 2,
+     "tire_swing_extra_ft": 6
+    }
+   },
+   "public_handbook": {
+    "publication": 325,
+    "url": "https://www.cpsc.gov/s3fs-public/325.pdf",
+    "dated": "2015-12-29",
+    "compression_min_fraction": 0.25,
+    "table_2_minimum_compressed_depths": [
+     {
+      "material": "Shredded/recycled rubber",
+      "depth_in": 6,
+      "fall_height_ft": 10,
+      "note": "does not compress in the same manner as other loose-fill materials"
+     },
+     {
+      "material": "Sand",
+      "depth_in": 9,
+      "fall_height_ft": 4
+     },
+     {
+      "material": "Pea gravel",
+      "depth_in": 9,
+      "fall_height_ft": 5
+     },
+     {
+      "material": "Wood mulch (non-CCA)",
+      "depth_in": 9,
+      "fall_height_ft": 7
+     },
+     {
+      "material": "Wood chips",
+      "depth_in": 9,
+      "fall_height_ft": 10
+     }
+    ],
+    "table_read_as": "page image of the PDF (page 11), the text layer being incomplete"
+   }
+  },
+  {
+   "id": "pool-band-planning",
+   "label": "Pool waterline band measurement",
+   "status": "convention",
+   "source_name": "PoolTile measurement guide and Ezarri mosaic calculator",
+   "source_url": "https://pooltile.ca/how-to-measure-and-calculate-your-pool-size/",
+   "comparison_source_url": "https://www.ezarri.com/us/mosaic-calculator",
+   "verified_at": "2026-09-10",
+   "expires_at": "2027-03-10",
+   "scope": "Waterline band area uses perimeter at the band times its height. It is distinct from the entire pool interior. No universal band height, grout specification, corner gap, submerged material rating or box coverage is supplied.",
+   "notes": "30x15ft pool,6in tile and band,20 tiles/box,10% reserve and zero grout/setbacks are hypothetical arithmetic examples. Users must enter product dimensions, packaging and installation clearances. Individual rectangular tiles only; no mosaic sheet cutting or structural/waterproofing design."
+  },
+  {
+   "id": "sod-format-observations",
+   "label": "Sod piece and roll sizes, pallet coverage and weight, and the cutting allowance used by the ranking sod calculators",
+   "status": "market_survey",
+   "source_name": "Sod Solutions (Sod University); Tri-Turf Sod Farms; Tip's Turf; Royal Landscape Nursery; Saratoga Sod Farm; Inch Calculator; Texas A&M AgriLife Extension",
+   "source_url": "https://sodsolutions.com/sod-university/square-feet-per-pallet/",
+   "verified_at": "2026-09-25",
+   "expires_at": "2027-03-25",
+   "scope": "What seven pages ranking for sod queries in the United States stated on 25 September 2026 about piece sizes, pallet coverage, pallet weight and the extra to order. Farms cut to their own sizes; no size here is a standard. No price is recorded. Calculiva keeps on file the verbatim excerpts read on 25 September 2026 and does not republish them.",
+   "sample_size": 7,
+   "formats": [
+    {
+     "id": "slab-16x24",
+     "name": "Slab, 16 × 24 in",
+     "width_in": 16,
+     "length_in": 24,
+     "stated_sqft": 2.66,
+     "exact_sqft": 2.6667,
+     "source": "sodsolutions",
+     "region": "southern U.S. (bermuda, zoysia, St. Augustine, centipede)",
+     "pallets_stated_sqft": [
+      399,
+      452,
+      503
+     ],
+     "pallets_sold_as_sqft": [
+      400,
+      450,
+      500
+     ]
+    },
+    {
+     "id": "mini-roll-18x40",
+     "name": "Mini hand roll, 18 × 40 in",
+     "width_in": 18,
+     "length_in": 40,
+     "stated_sqft": 5,
+     "exact_sqft": 5,
+     "source": "sodsolutions",
+     "region": "northern cool-season areas",
+     "pieces_per_pallet": [
+      80,
+      90,
+      100
+     ],
+     "pallets_sold_as_sqft": [
+      400,
+      450,
+      500
+     ]
+    },
+    {
+     "id": "roll-24x60",
+     "name": "Roll, 24 × 60 in",
+     "width_in": 24,
+     "length_in": 60,
+     "stated_sqft": 10,
+     "exact_sqft": 10,
+     "source": "sodsolutions",
+     "region": "bermudagrass"
+    },
+    {
+     "id": "roll-18x80",
+     "name": "Roll, 18 × 80 in",
+     "width_in": 18,
+     "length_in": 80,
+     "stated_sqft": 10,
+     "exact_sqft": 10,
+     "source": "sodsolutions",
+     "region": "northern U.S."
+    }
+   ],
+   "sources": [
+    {
+     "id": "sodsolutions",
+     "name": "Sod Solutions, Sod University: How Many Square Feet are in a Pallet of Sod?",
+     "url": "https://sodsolutions.com/sod-university/square-feet-per-pallet/",
+     "pallet_weight_lb": [
+      1500,
+      3000
+     ],
+     "pallet_range_sqft": [
+      400,
+      700
+     ],
+     "large_roll_pallets_sqft": [
+      500,
+      600,
+      700
+     ]
+    },
+    {
+     "id": "triturf",
+     "name": "Tri-Turf Sod Farms, Sod Calculator",
+     "url": "https://triturfsod.com/sod-calculator",
+     "allowance_percent": 10,
+     "allowance_complex_percent": 15,
+     "pallet_sqft": {
+      "bermuda_fescue_bluegrass": 540,
+      "zoysia": 450
+     },
+     "big_roll_sqft": {
+      "bermuda_fescue_bluegrass": 450,
+      "zoysia": 360
+     }
+    },
+    {
+     "id": "tipsturf",
+     "name": "Tip's Turf, Sod Calculator",
+     "url": "https://www.tipsturf.com/sod-calculator/",
+     "allowance_percent": [
+      5,
+      10
+     ],
+     "pallet_sqft_about": 450
+    },
+    {
+     "id": "royal",
+     "name": "Royal Landscape Nursery, Sod Calculator",
+     "url": "https://royallandscapenursery.info/services/nursery/sod-calculator/",
+     "piece_in": [
+      16,
+      24
+     ],
+     "stated_piece_sqft": 2.75,
+     "pallet_sqft": 500,
+     "pieces_per_pallet_about": 180,
+     "check": "16 × 24 in = 384 sq in = 2.667 sq ft, not 2.75; 180 pieces of 2.667 sq ft = 480 sq ft. Dividing an area by 2.75 gives about 3 % fewer pieces than it takes to cover it."
+    },
+    {
+     "id": "saratoga",
+     "name": "Saratoga Sod Farm, Sod Calculator Tool",
+     "url": "https://www.saratogasod.com/tips-resources/sod-calculator/",
+     "allowance_percent": [
+      5,
+      10
+     ],
+     "tool_allowance_percent": 10
+    },
+    {
+     "id": "inchcalculator",
+     "name": "Inch Calculator, Sod Calculator",
+     "url": "https://www.inchcalculator.com/sod-calculator/",
+     "pallet_sqft": [
+      450,
+      500
+     ],
+     "pallet_weight_lb": [
+      1500,
+      3000
+     ],
+     "check": "At the piece sizes Sod Solutions lists, 60 rolls of 10 sq ft are 600 sq ft and 100 slabs of 2.667 sq ft are 267 sq ft, neither 450 to 500; the counts only hold for other piece sizes."
+    },
+    {
+     "id": "tamu",
+     "name": "Texas A&M AgriLife Extension, How to select and install sod",
+     "url": "https://mytexas.ag.tamu.edu/publications/how-to-select-and-install-sod/",
+     "pallet_sqft_about": 450
+    }
+   ],
+   "derived": {
+    "slab_pieces_per_stated_pallet": {
+     "value": [
+      150,
+      170,
+      189
+     ],
+     "rule": "399 / 2.66 = 150.0; 452 / 2.66 = 169.9; 503 / 2.66 = 189.1 — the three slab pallets Sod Solutions lists are 150, 170 and 189 slabs."
+    }
+   }
+  },
+  {
+   "id": "sod-installation-guidance",
+   "label": "Laying sod: brick pattern, cut edges, topsoil and compost under new sod, first watering, as published by four extension services",
+   "status": "convention",
+   "source_name": "Penn State Extension; Texas A&M AgriLife Extension; UF/IFAS Extension (LH013, LH010); NC State Extension",
+   "source_url": "https://extension.psu.edu/lawn-establishment/",
+   "verified_at": "2026-09-25",
+   "expires_at": "",
+   "scope": "Solid sod laid by hand on a home lawn in the United States. Each figure belongs to the publisher named and was read on the verification date; Calculiva keeps on file the verbatim excerpts read on 2026-09-25 and does not republish them. No figure is a standard. The four publishers agree on the staggered (brick) pattern; they differ on how much organic matter to work in.",
+   "sample_size": 6,
+   "publishers": [
+    {
+     "id": "psu",
+     "publisher": "Penn State Extension",
+     "title": "Lawn Establishment",
+     "url": "https://extension.psu.edu/lawn-establishment/",
+     "pattern": "staggered, similar to laying bricks",
+     "topsoil_settled_in": [
+      4,
+      6
+     ],
+     "topsoil_transition_in": 2,
+     "organic_layer_in": [
+      1,
+      2
+     ],
+     "organic_worked_in": [
+      4,
+      6
+     ],
+     "organic_layer_max_single_pass_in": 2,
+     "till_min_in": 4
+    },
+    {
+     "id": "tamu",
+     "publisher": "Texas A&M AgriLife Extension",
+     "title": "How to select and install sod",
+     "url": "https://mytexas.ag.tamu.edu/publications/how-to-select-and-install-sod/",
+     "pattern": "brickwork",
+     "pallet_sqft_about": 450,
+     "sqyd_per_1000_sqft": 111,
+     "first_watering_wet_depth_in": 4,
+     "then_moist_depth_in": [
+      3,
+      4
+     ],
+     "then_every_days": [
+      2,
+      3
+     ],
+     "install_within_hours": 36
+    },
+    {
+     "id": "ifas-lh013",
+     "publisher": "UF/IFAS Extension",
+     "title": "Establishing Your Florida Lawn (LH013)",
+     "url": "https://ask.ifas.ufl.edu/publication/LH013",
+     "pattern": "staggered brick",
+     "offcut_reuse": "fill cracks with cut up pieces of sod",
+     "fertilize_after_days_min": 30,
+     "pallet_life_summer_hours_max": 48
+    },
+    {
+     "id": "ifas-lh010",
+     "publisher": "UF/IFAS Extension",
+     "title": "St. Augustinegrass for Florida Lawns (LH010)",
+     "url": "https://ask.ifas.ufl.edu/publication/LH010",
+     "pattern": "staggered brick-like"
+    },
+    {
+     "id": "ncsu",
+     "publisher": "NC State Extension",
+     "title": "Carolina Lawns",
+     "url": "https://content.ces.ncsu.edu/carolina-lawns",
+     "pattern": "bricklike",
+     "organic_cuyd_per_1000_sqft": [
+      1,
+      2
+     ],
+     "organic_worked_in": [
+      6,
+      8
+     ],
+     "organic_when": "if planting in heavy clay or very sandy soils",
+     "install_within_hours": 24
+    },
+    {
+     "id": "ncsu-hb",
+     "publisher": "NC State Extension",
+     "title": "Extension Gardener Handbook, chapter 9: Lawns",
+     "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/9-lawns",
+     "pattern": "bricklike",
+     "note": "Carolina Lawns, from the same publisher, gives about April until July 1 for warm-season sod."
+    }
+   ],
+   "derived": {
+    "ncsu_organic_as_layer_in": {
+     "value": [
+      0.324,
+      0.648
+     ],
+     "rule": "1 cu yd = 46,656 cu in spread over 1,000 sq ft = 144,000 sq in → 0.324 in; 2 cu yd → 0.648 in",
+     "note": "NC State's rate, spread as a layer, is about a third to two thirds of an inch; Penn State's layer is 1 to 2 inches."
+    }
+   }
+  },
+  {
+   "id": "sod-plugging-ifas",
+   "label": "Plugging a lawn from solid sod: spacing by species and square feet of sod per 1,000 square feet, UF/IFAS Table 3",
+   "status": "convention",
+   "source_name": "UF/IFAS Extension, Establishing Your Florida Lawn (LH013), Table 3; NC State Extension, Carolina Lawns",
+   "source_url": "https://ask.ifas.ufl.edu/publication/LH013",
+   "verified_at": "2026-09-25",
+   "expires_at": "",
+   "scope": "Warm-season grasses planted as 2-inch plugs cut from solid sod, on a square grid. The table is UF/IFAS's, for Florida; the spacing ranges quoted from NC State are for North Carolina. Sprigs are recorded but not modeled.",
+   "sample_size": 2,
+   "conversions": {
+    "two_inch_plugs_per_sqyd": 324,
+    "sprig_linear_ft_per_sqft": 80,
+    "sprig_bushels_per_sqyd": 1
+   },
+   "table3": [
+    {
+     "species": "St. Augustinegrass",
+     "method": "2-inch plugs",
+     "spacing_in": 12,
+     "sod_sqft_per_1000": [
+      30,
+      50
+     ]
+    },
+    {
+     "species": "St. Augustinegrass",
+     "method": "sprigs",
+     "spacing_in": 12,
+     "sod_sqft_per_1000": [
+      10,
+      15
+     ]
+    },
+    {
+     "species": "Centipedegrass",
+     "method": "2-inch plugs",
+     "spacing_in": 6,
+     "sod_sqft_per_1000": [
+      100,
+      150
+     ]
+    },
+    {
+     "species": "Centipedegrass",
+     "method": "sprigs",
+     "spacing_in": 6,
+     "sod_sqft_per_1000": [
+      30,
+      50
+     ]
+    },
+    {
+     "species": "Zoysiagrass",
+     "method": "2-inch plugs",
+     "spacing_in": 6,
+     "sod_sqft_per_1000": [
+      100,
+      150
+     ]
+    },
+    {
+     "species": "Zoysiagrass",
+     "method": "sprigs",
+     "spacing_in": 6,
+     "sod_sqft_per_1000": [
+      8,
+      15
+     ]
+    },
+    {
+     "species": "Bermudagrass",
+     "method": "2-inch plugs",
+     "spacing_in": 12,
+     "sod_sqft_per_1000": [
+      30,
+      50
+     ]
+    },
+    {
+     "species": "Bermudagrass",
+     "method": "sprigs",
+     "spacing_in": 12,
+     "sod_sqft_per_1000": [
+      2,
+      5
+     ]
+    }
+   ],
+   "table3_note": "The numbers in the column refer to the sq ft of solid sod from which either 2-inch plugs or sprigs can be obtained.",
+   "derived": {
+    "grid_arithmetic": "Plugs on a square grid at spacing s cover one plug per s² of lawn: 1,000 sq ft takes 1,000 plugs at 12 in and 4,000 at 6 in. At 324 two-inch plugs per sq yd, that is 27.8 and 111.1 sq ft of sod, just under or at the low end of the Table 3 ranges (30-50 and 100-150)."
+   }
+  },
+  {
+   "id": "soil-bag-observations",
+   "label": "Bagged garden soil sizes, a manufacturer's coverage statement, a contractor wheelbarrow's volume, and what ranking soil calculators assume",
+   "status": "market_survey",
+   "source_name": "Scotts Miracle-Gro product page and retail listings; True Temper listing; five soil calculators ranking in the United States",
+   "source_url": "https://scottsmiraclegro.com/en-us/brands/miracle-gro/products/raised-bed-in-ground-soils/miracle-gro-garden-soil-all-purpose/70551430.html",
+   "verified_at": "2026-09-25",
+   "expires_at": "2027-03-25",
+   "scope": "What was offered or stated on 25 September 2026 by one bagged-soil product line, one wheelbarrow model and the five tools ranking first for 'soil calculator' in the United States. Bag sizes are those of the product titles read; no claim is made that they are the only sizes on sale. No price is recorded.",
+   "sample_size": 11,
+   "bag_sizes": [
+    {
+     "cuft": 0.75,
+     "product": "Miracle-Gro Garden Soil All Purpose 0.75 cu. ft.",
+     "url": "https://www.homedepot.com/p/Miracle-Gro-Garden-Soil-All-Purpose-0-75-cu-ft-for-In-Ground-Use-Gardens-and-Raised-Beds-Flowers-Vegetables-Trees-Shrubs-75030430/206553445",
+     "read_as": "product title"
+    },
+    {
+     "cuft": 1,
+     "product": "Miracle-Gro Garden Soil All Purpose, 1 cu. ft.",
+     "url": "https://scottsmiraclegro.com/en-us/brands/miracle-gro/products/raised-bed-in-ground-soils/miracle-gro-garden-soil-all-purpose/70551430.html",
+     "read_as": "manufacturer page"
+    },
+    {
+     "cuft": 1.5,
+     "product": "Miracle-Gro Garden Soil All Purpose For In-Ground Use 1.5 cu ft",
+     "url": "https://www.walmart.com/ip/Miracle-Gro-Garden-Soil-All-Purpose-For-In-Ground-Use-1-5-cu-ft/387147270",
+     "read_as": "product title"
+    },
+    {
+     "cuft": 2,
+     "product": "Miracle-Gro Garden Soil All Purpose, 2 cu. ft. bag",
+     "url": "https://www.samsclub.com/ip/miracle-grow-garden-soil-all-purpose-for0in-ground-use/18103604196",
+     "read_as": "product description"
+    },
+    {
+     "dry_quarts": 20,
+     "product": "20-quart bags of topsoil and compost in a raised-bed recipe",
+     "url": "https://www.gardeners.com/blogs/vegetable-gardening-articles/soil-calculator",
+     "read_as": "article"
+    }
+   ],
+   "manufacturer_coverage": {
+    "product": "Miracle-Gro Garden Soil All Purpose",
+    "url": "https://scottsmiraclegro.com/en-us/brands/miracle-gro/products/raised-bed-in-ground-soils/miracle-gro-garden-soil-all-purpose/70551430.html",
+    "check": "24 sq ft x 2/12 ft = 4 cu ft; 24 x 3/12 = 6 cu ft: the statement is the geometry with no allowance."
+   },
+   "wheelbarrow": {
+    "capacity_cuft": 6,
+    "products": [
+     {
+      "product": "True Temper 6 Cubic Foot Steel Contractor Wheelbarrow with Flat Free Tire M6FFBB",
+      "url": "https://www.acmetools.com/true-temper-6-cubic-foot-steel-contractor-wheelbarrow-with-flat-free-tire-m6ffbb/027997017972.html"
+     },
+     {
+      "product": "Jackson Contractor Wheelbarrow, 6 cu ft",
+      "url": "https://www.quill.com/Jackson-Contractor-Wheelbarrows-Black-6-CuFt/cbs/270798.html"
+     }
+    ],
+    "note": "The listing read states the tray volume only; no load rating was published on it, so none is used."
+   },
+   "observations": [
+    {
+     "tool": "Gardener's Supply Company",
+     "url": "https://www.gardeners.com/blogs/vegetable-gardening-articles/soil-calculator",
+     "basis": "rectangle, square or circle raised bed; cubic yards and cubic feet; a 60 % topsoil, 30 % compost, 10 % potting mix recipe",
+     "stated": "To fill a 3x6 bed with 10\" sides, you will need 15 cubic feet of blended soil ... 9 cubic feet of topsoil (9 20-quart bags)",
+     "check": "Nine 20-quart bags hold 180 dry quarts, 7.0 cubic feet, not 9."
+    },
+    {
+     "tool": "Inch Calculator",
+     "url": "https://www.inchcalculator.com/soil-calculator/",
+     "basis": "one area; bags at 0.75 cubic feet each; weight dry, compacted and wet",
+     "stated": "One yard of dry or loose soil weighs 1.0 – 1.3 tons, while one yard of wet or compacted soil weighs 1.5 – 1.7 tons.",
+     "check": "No source is given for the weights."
+    },
+    {
+     "tool": "Omni Calculator",
+     "url": "https://www.omnicalculator.com/biology/soil",
+     "basis": "one area or a typed area; density entered by the user; price per unit mass or volume",
+     "stated": "36 bags if the bag size is 0.75 cubic feet and 27 bags for the larger 1 cu ft bag."
+    },
+    {
+     "tool": "Soil Depot",
+     "url": "https://soil-depot.com/soil-calculator/",
+     "basis": "one area (map, rectangle, circle, triangle, acreage); waste and compaction percentages; dump truck types for commercial orders",
+     "stated": "Tandem (10-wheeler) · 12 cy / 14 t; End dump (semi) · 18 cy / 22 t; add roughly 15 to 25 percent for fill that will be compacted in lifts; Minimum order: 4,000 cubic yards."
+    },
+    {
+     "tool": "Soil Direct",
+     "url": "https://soildirect.com/calculator/cubic-yard-calculator/",
+     "basis": "length, width, depth; cubic yards converted to tons",
+     "stated": "We recommend ordering 5–10% extra."
+    }
+   ]
+  },
+  {
+   "id": "soil-weights-and-sale-units",
+   "label": "Bulk soil and fill: loose and in-place weights per cubic yard, how bulk and bagged soil must be sold, and the vehicle payload label",
+   "status": "standard",
+   "source_name": "NIST Handbook 130 (2026 edition), Sections IV-A and IV-B; Caterpillar, Earthwork volumes reference tables; NHTSA interpretation of FMVSS No. 110, S4.3",
+   "source_url": "https://www.nist.gov/document/2026-hb-130-section-iv-b",
+   "verified_at": "2026-09-25",
+   "expires_at": "",
+   "scope": "Soil, topsoil and fill dirt bought for a residential project in the United States, in bags or in bulk. The weights are Caterpillar's reference values for earthmoving; the source itself says weight varies with moisture, grain size and compaction, so they are used as published figures, not as the weight of a given load. The sale rules are the NIST uniform regulations that states adopt; whether a state has adopted a given section is not checked here.",
+   "sample_size": 5,
+   "sale_units": {
+    "bulk": {
+     "rule": "Top soil, fill dirt, aggregate or chipped rock, sand (including concrete and mortar sand), decomposed granite, landscape type rock, and cinders must be sold by the cubic meter or cubic yard or by weight.",
+     "section": "Handbook 130 (2026), IV-B Uniform Regulation for the Method of Sale of Commodities, 2.29. Sand, Rock, Gravel, Stone, Paving Stone",
+     "url": "https://www.nist.gov/document/2026-hb-130-section-iv-b"
+    },
+    "mulch": {
+     "rule": "All mulch shall be sold, offered, or exposed for sale in terms of volume measure in SI units in terms of the cubic meter or liter or in U.S. customary units in terms of the cubic yard or cubic foot.",
+     "section": "Handbook 130 (2026), IV-B, 2.18.2. Quantity",
+     "url": "https://www.nist.gov/document/2026-hb-130-section-iv-b"
+    },
+    "dry_measure": {
+     "rule": "dry measure U.S. bushel of 2150.42 in3, or peck, dry quart, and dry pint subdivisions of the bushel",
+     "label_rule": "Whenever the declaration of quantity is in terms of the dry pint or dry quart, the declaration shall include the word “dry.”",
+     "section": "Handbook 130 (2026), IV-A Uniform Packaging and Labeling Regulation, units table and 6.7.2. Units of Two or More Meanings",
+     "url": "https://www.nist.gov/document/2026-hb-130-section-iv",
+     "bushel_in3": 2150.42,
+     "dry_quarts_per_bushel": 32,
+     "dry_quart_in3": 67.200625,
+     "cubic_foot_in3": 1728,
+     "note": "One dry quart is 1/32 of the bushel, 67.200625 cubic inches; a cubic foot therefore holds 25.714 dry quarts, not 20 and not the 29.922 liquid quarts."
+    }
+   },
+   "weights": {
+    "source": "Caterpillar, Earthwork volumes reference tables, Common materials loose & bank table",
+    "url": "https://www.cat.com/en_US/articles/ci-articles/earthwork-volumes-reference-tables.html",
+    "page_date": "2025-01-15",
+    "unit": "pounds per cubic yard",
+    "definitions": {
+     "loose": "Loose Cubic Yards (LCY): Material which has been excavated in some way and swelled as a result of the space that now exist between its elements.",
+     "bank": "Bank Cubic Yards (BCY)/Bank Cubic Meters (BCM): Material as it lies in its natural bank state.",
+     "compact": "Compact Cubic Yards (CCY)/Compact Cubic Meters (CCM): Material which has been compacted and become more dense as a result.",
+     "load_factor_reading": "Calculiva's reading of the table: in the five rows used here, loose weight ≈ bank weight x load factor, within the rounding of the source table (1,600 ≈ 2,300 x 0.70 for top soil), so a loose cubic yard brought back to bank density occupies the load factor of a cubic yard."
+    },
+    "caveat": "Weight of material varies with moisture content, grain size, degree of compaction, etc. Tests must be made to determine exact material characteristics.",
+    "rows": [
+     {
+      "id": "topsoil",
+      "label": "Top soil",
+      "loose_lb_cuyd": 1600,
+      "bank_lb_cuyd": 2300,
+      "loose_kg_m3": 950,
+      "bank_kg_m3": 1370,
+      "load_factor": 0.7
+     },
+     {
+      "id": "loam",
+      "label": "Earth, loam",
+      "loose_lb_cuyd": 2100,
+      "bank_lb_cuyd": 2600,
+      "loose_kg_m3": 1250,
+      "bank_kg_m3": 1540,
+      "load_factor": 0.81
+     },
+     {
+      "id": "earth-dry",
+      "label": "Earth, dry packed",
+      "loose_lb_cuyd": 2550,
+      "bank_lb_cuyd": 3200,
+      "loose_kg_m3": 1510,
+      "bank_kg_m3": 1900,
+      "load_factor": 0.8
+     },
+     {
+      "id": "earth-wet",
+      "label": "Earth, wet excavated",
+      "loose_lb_cuyd": 2700,
+      "bank_lb_cuyd": 3400,
+      "loose_kg_m3": 1600,
+      "bank_kg_m3": 2020,
+      "load_factor": 0.79
+     },
+     {
+      "id": "sand-dry",
+      "label": "Sand, dry loose",
+      "loose_lb_cuyd": 2400,
+      "bank_lb_cuyd": 2700,
+      "loose_kg_m3": 1420,
+      "bank_kg_m3": 1600,
+      "load_factor": 0.89
+     }
+    ]
+   },
+   "payload_label": {
+    "rule": "S4.3(a) requires that each placard show vehicle \"capacity weight\" expressed as \"The combined weight of occupants and cargo should never exceed XXX kilograms or XXX pounds.\"",
+    "location": "the vehicle placard on the driver's side B-pillar",
+    "source": "NHTSA, interpretation of FMVSS No. 110, Tire Selection and Rims, S4.3",
+    "url": "https://www.nhtsa.gov/interpretations/gf004408",
+    "note": "The figure covers occupants and cargo together: the driver and passengers are subtracted from it before the soil."
+   },
+   "physical_basis": {
+    "pounds_per_short_ton": 2000,
+    "cubic_feet_per_cubic_yard": 27
+   }
+  },
+  {
+   "id": "stock-lengths-us",
+   "label": "Board lengths actually sold at retail in the United States",
+   "status": "market_survey",
+   "source_name": "The Home Depot, primed MDF 1x3 and 1x4 product pages",
+   "source_url": "https://www.homedepot.com/b/Lumber-Composites-Boards-Planks-MDF-Boards/Primed/N-5yc1vZchzsZ1z0sfky",
+   "evidence_urls": [
+    "https://www.homedepot.com/p/1-in-x-3-in-x-8-ft-Primed-MDF-Board-Common-11-16-in-x-2-1-2-in-x-8-ft-PE2EHD17x2-5x97/305126352",
+    "https://www.homedepot.com/p/reviews/1-in-x-3-in-x-10-ft-Primed-MDF-Boards-83380/302602704/1",
+    "https://www.homedepot.com/p/questions/1-in-x-4-in-x-12-ft-Primed-MDF-Board-Common-11-16-in-x-3-1-2-in-x-12-ft-PE2EHD17x3-5x145/305126656/2"
+   ],
+   "verified_at": "2026-09-09",
+   "expires_at": "2027-09-09",
+   "scope": "finish board lengths observed on the shelf. Availability varies by store and by item: the list is a starting point, not a stock guarantee.",
+   "sample_size": 3,
+   "lengths_ft": [
+    8,
+    10,
+    12,
+    16
+   ],
+   "observed_ft": [
+    8,
+    10,
+    12
+   ],
+   "unverified_ft": [
+    16
+   ],
+   "note_16ft": "The 16-foot length is offered by the tool because it is common in pine, but it was NOT observed on the MDF items of this reading. The tool flags it as such."
+  },
+  {
+   "id": "tile-joint-guidance",
+   "label": "Tile joint and offset guidance, attributed to published sources",
+   "status": "convention",
+   "source_name": "Daltile and Ceramic Tile Education Foundation — installation guidance",
+   "source_url": "https://www.daltile.com/trend-hub/design-ideas-library/grout-joints-for-large-format-tile",
+   "verified_at": "2026-09-10",
+   "expires_at": "2027-03-10",
+   "scope": "Published manufacturer/education guidance, not an independent verification of the complete ANSI standard; tile-specific instructions govern.",
+   "minimum_joint_in": 0.0625,
+   "large_tile_side_in": 15,
+   "large_rectified_joint_in": 0.125,
+   "large_calibrated_joint_in": 0.1875,
+   "offset_percent_as_published": 33,
+   "offset_source_url": "https://www.ceramictilefoundation.org/blog/offsets-grout-joints-customer-expectations",
+   "notes": "CTEF specifies the side being offset above 15 nominal inches and manufacturer exceptions. One-third in the geometric model is 33.333... percent; it must not be represented as exact compliance with a 33 percent limit. The 1-inch sliver warning in the existing engine is a product planning flag, not an installation standard. All room, tile, perimeter, box, reserve and price defaults on the page are a worked example, not a product listing."
+  },
+  {
+   "id": "trim-nominal-actual-mdf",
+   "label": "Actual dimensions of primed MDF boards sold in the United States",
+   "status": "market_survey",
+   "source_name": "The Home Depot, MDF Boards / Primed category — \"Common\" and \"Actual\" labels on the product pages",
+   "source_url": "https://www.homedepot.com/b/Lumber-Composites-Boards-Planks-MDF-Boards/Primed/N-5yc1vZchzsZ1z0sfky",
+   "verified_at": "2026-09-09",
+   "expires_at": "2027-09-09",
+   "scope": "primed MDF boards sold at retail in the United States. MDF is NOT covered by PS 20: its actual thickness differs from that of softwood.",
+   "sample_size": 4,
+   "note": "Central finding: primed MDF is 11/16 in thick (reading: 0.669 in on one product page) where PS 20 gives 3/4 in for a softwood board of the same nominal size. The WIDTHS, however, match PS 20. Applying the softwood standard to MDF therefore gives a thickness that is wrong by 1/16 in — which matters when a batten butts against an existing baseboard.",
+   "values": [
+    {
+     "nominal": "1x3",
+     "actual_thickness_in": 0.6875,
+     "actual_thickness_label": "11/16",
+     "actual_width_in": 2.5,
+     "actual_width_label": "2-1/2"
+    },
+    {
+     "nominal": "1x4",
+     "actual_thickness_in": 0.6875,
+     "actual_thickness_label": "11/16",
+     "actual_width_in": 3.5,
+     "actual_width_label": "3-1/2"
+    },
+    {
+     "nominal": "1x6",
+     "actual_thickness_in": 0.6875,
+     "actual_thickness_label": "11/16",
+     "actual_width_in": 5.5,
+     "actual_width_label": "5-1/2",
+     "measured_actual_thickness_in": 0.669
+    },
+    {
+     "nominal": "1x8",
+     "actual_thickness_in": 0.6875,
+     "actual_thickness_label": "11/16",
+     "actual_width_in": 7.25,
+     "actual_width_label": "7-1/4"
+    }
+   ]
+  },
+  {
+   "id": "trim-waste-allowance",
+   "label": "Usual waste allowance on trim installed in lengths (running trim)",
+   "status": "convention",
+   "source_name": "WoodWeb Knowledge Base — \"Waste Allowance for Running Trim\", a thread among millwork professionals",
+   "source_url": "https://www.woodweb.com/knowledge_base/Waste_Allowance_for_Running_Trim.html",
+   "verified_at": "2026-09-09",
+   "expires_at": "2027-09-09",
+   "scope": "interior moldings installed in lengths — baseboard, chair rail, panel molding, applied frames. Does not apply to sheet panels or to siding.",
+   "sample_size": 2,
+   "no_normative_source": true,
+   "range_percent": {
+    "min": 10,
+    "max": 15
+   },
+   "default_percent": 10,
+   "bands": [
+    {
+     "case": "paint grade primed, few miters, long runs",
+     "min": 5,
+     "max": 10
+    },
+    {
+     "case": "typical job, mid-range home",
+     "min": 10,
+     "max": 15
+    },
+    {
+     "case": "pre-finished or stained",
+     "min": 10,
+     "max": 15
+    }
+   ]
+  },
+  {
+   "id": "wainscot-height-conventions",
+   "label": "Usual wainscoting height on an American interior wall",
+   "status": "convention",
+   "source_name": "Bob Vila — \"The Right Wainscoting Height for Every Scenario, Solved!\"",
+   "source_url": "https://www.bobvila.com/articles/wainscoting-height/",
+   "verified_at": "2026-09-09",
+   "expires_at": "2027-09-09",
+   "scope": "decorative interior wall paneling (framed wainscoting, picture frame molding, beadboard) on American residential walls. Does not apply to exterior siding or to accessibility standards.",
+   "sample_size": 2,
+   "no_normative_source": true,
+   "corroboration": {
+    "source_name": "Fine Homebuilding, \"Wainscot Height\" thread",
+    "source_url": "https://www.finehomebuilding.com/forum/wainscot-height",
+    "verified_at": "2026-09-09",
+    "why": "A practitioner's opinion, not a standard: it establishes that the range is a practice and not a prescription."
+   },
+   "rule": {
+    "name": "one-third rule",
+    "fraction": 0.3333333333333333,
+    "includes": "cap and moldings included in the height measured from the floor"
+   },
+   "presets_by_ceiling": [
+    {
+     "ceiling_ft": 8,
+     "ceiling_in": 96,
+     "height_in": 32,
+     "basis": "stated explicitly by the source"
+    },
+    {
+     "ceiling_ft": 9,
+     "ceiling_in": 108,
+     "height_in": 36,
+     "basis": "stated explicitly by the source"
+    },
+    {
+     "ceiling_ft": 10,
+     "ceiling_in": 120,
+     "height_in": 40,
+     "basis": "NOT stated by the source: the one-third rule applied to 120 inches. To be presented as a calculation, not as an observed value."
+    }
+   ],
+   "alternative": {
+    "name": "two-thirds",
+    "fraction": 0.6666666666666666,
+    "note": "Presented by the source as a current trend, not as the reference. On an 8-foot wall it gives 64 inches."
+   },
+   "never": {
+    "rule": "never exactly half the height of the wall",
+    "why": "Cutting a wall into two equal parts is the proportion molding guides advise against. The calculator flags it when the entered height falls near half."
+   },
+   "windows": {
+    "why": "The only case where the source suspends its own rule: the window sill takes precedence over the one-third."
+   }
+  },
+  {
+   "id": "wallpaper-roll-observations",
+   "label": "Wallpaper estimators and published roll formats, observed executions",
+   "status": "market_survey",
+   "source_name": "York Wallcoverings roll estimation chart and live executions of ranking wallpaper calculators, 10 September 2026",
+   "source_url": "",
+   "verified_at": "2026-09-10",
+   "expires_at": "2027-03-10",
+   "sample_size": 8,
+   "scope": "Roll formats and estimator rules as published on the day tested. The American bolt of 20.5 in × 33 ft (56 sq ft), the European roll of 52 cm × 10 m and the 24 in × 13 ft or 27 ft Painted Paper roll are the formats those publishers state; the calculator preloads the 20.5 × 33 ft bolt as an example and every roll dimension must be taken from the product page. The 4-inch trim allowance and 21-inch repeat preloaded in the calculator are hypothetical.",
+   "formats": [
+    {
+     "publisher": "York Wallcoverings",
+     "url": "",
+     "format": "1 bolt = 56 ft², 20.5 in × 33 ft; 1 bolt covers about 6 ft of wall up to 9-ft ceilings; deduct 1 bolt for every 4 ordinary doors or windows",
+     "chart": "bolts by room size, 8-ft / 9-ft ceiling: 8×10 → 5 / 6; 10×10 → 6 / 6; 10×12 → 6 / 7; 10×14 → 7 / 7; 12×12 → 7 / 7 (chart continues); PDF 'how-much-wallpaper.pdf' linked",
+     "url_removed_on": "2026-09-25"
+    },
+    {
+     "publisher": "Wallpaper Direct (US page)",
+     "url": "https://www.wallpaperdirect.com/us/wallpaper-calculator",
+     "format": "'Estimates are based on a standard roll size of 52 cm × 10 m'"
+    },
+    {
+     "publisher": "Painted Paper",
+     "url": "https://paintedpaper.com/products/odette-arboretum-wallpaper",
+     "format": "rolls 24 in W × 13 ft L or 24 in W × 27 ft L; 8.5 × 10 in sample; 24 × 36 in preview panel; product repeats seen: 24 in (Odette Arboretum, Luca Bloom) and 48 in ('this pattern needs at least 2 rolls'); on-page estimator with roll size choice and height limit 31 ft 2 in"
+    },
+    {
+     "publisher": "Phillip Jeffries",
+     "url": "https://www.phillipjeffries.com/yardage-calculator",
+     "format": "sold by the linear yard; roll widths 36, 45 and 54 in selectable; results rounded up to the next whole yard; 10 % more recommended"
+    },
+    {
+     "publisher": "Schumacher",
+     "url": "https://schumacher.com/catalog/products/5000640",
+     "format": "Deux Par Deux Ground 5000640: roll width 36 in, 4 yards per roll, coverage 36 sq ft, random match, order minimum 144 in × 36 in (one roll); item 5000670: 36 in, 4.5 yards, 40.5 sq ft; no calculator published"
+    }
+   ],
+   "observations": [
+    {
+     "tool": "Wallpaper Direct calculator",
+     "url": "https://www.wallpaperdirect.com/us/wallpaper-calculator",
+     "basis": "wall area per wall (whole feet and inches), doors and windows deducted by area, fixed 10 % wastage checkbox, rolls of 52 cm × 10 m",
+     "inputs": "12 × 8 ft wall, pattern repeat typed as 1 ft 9 in twice",
+     "outputs": "wall area 96.0 ft², pattern repeat echoed 0 ft 0 in, +9.6 ft² wastage, total 105.6 ft², 'You'll need 3 rolls'"
+    },
+    {
+     "tool": "Thibaut wallpaper calculator",
+     "url": "https://www.thibautdesign.com/wallpaper-calculator",
+     "basis": "total wall width and ceiling height in decimal feet, roll width in inches, roll length in yards, repeat in inches; recommends not deducting openings and ordering up to 20 % more",
+     "inputs": "12 ft wide, 8 ft high, roll 20.5 in × 11 yd, repeat 21 in; then repeat 0",
+     "outputs": "Estimated Rolls Needed 4; with repeat 0: 2"
+    },
+    {
+     "tool": "DecoratorsBest estimator (rolls and yards tabs)",
+     "url": "https://www.decoratorsbest.com/pages/wallpaper-estimator-with-pattern-repeat-for-rolls",
+     "basis": "wall height plus up to four wall lengths, horizontal and vertical repeat, roll width and length or yards; one roll count after Calculate (execution recorded by the previous session on 2026-09-09)",
+     "inputs": "not executed: the page redirected to google.com on 2026-09-10",
+     "outputs": "not re-executed; no openings field, no strip plan (2026-09-09 record)"
+    },
+    {
+     "tool": "Omni Calculator wallpaper",
+     "url": "https://www.omnicalculator.com/construction/wallpaper",
+     "basis": "single wall or rectangular room, doors and windows by count and size, roll length and width, pattern repeat, cost per roll; adjusted height and adjusted wall area fields",
+     "inputs": "single wall 3.66 × 2.44 m, roll 10.06 × 0.52 m, repeat 0.533 m",
+     "outputs": "wall surface area 8.93 m²; adjusted height 2.665 m, which is five whole repeats of 0.533 m (the height rounded up to the repeat, no trim allowance); rolls then follow from adjusted area ÷ roll area"
+    },
+    {
+     "tool": "Romo wallcovering calculator",
+     "url": "https://www.romo.com/calculator",
+     "basis": "roll width and length, repeat type straight / half drop / random, vertical repeat, 10 % wastage checkbox, walls in feet and inches",
+     "inputs": "page read; result text not captured after submit",
+     "outputs": "the only ranking tool with a match-type selector"
+    },
+    {
+     "tool": "Phillip Jeffries yardage calculator",
+     "url": "https://www.phillipjeffries.com/yardage-calculator",
+     "basis": "perimeter × height ÷ roll width, rounded up to whole linear yards",
+     "inputs": "registered as 100 sq ft; width 36 then 54 in",
+     "outputs": "12 linear yards at 36 in, 8 at 54 in"
+    },
+    {
+     "tool": "Carnegie wallcovering calculator",
+     "url": "https://carnegiefabrics.com/wallcovering-calculator",
+     "basis": "square footage or length × height ÷ product width (36 to 118 in) → linear yards",
+     "inputs": "54 in, 40 × 10 ft",
+     "outputs": "30 linear yards"
+    },
+    {
+     "tool": "Mahones, Cole & Son, Jane Clayton, Innovations",
+     "url": "https://mahoneswallpapershop.com/pages/calculator",
+     "basis": "wall dimensions and roll dimensions → rolls (Mahones single and double rolls; Cole & Son roll dimensions from product pages; Jane Clayton UK with repeat and trim allowance; Innovations material width → yards)",
+     "inputs": "forms read; outputs not captured in the test browser",
+     "outputs": "none recorded"
+    }
+   ],
+   "source_removed_on": "2026-09-25",
+   "source_status": "York's chart page (formerly at yorkwallcoverings.com/wallpaper-calculator), the record's first source, answers 404 since York moved store (checked 2026-09-25); no archived copy after June 2020. The chart is kept as read on 2026-09-10, without a link; the other publishers' links are live. On 2026-09-30 the same bolt definition and chart were read live on a page published by Brewster, https://www.brewsterwallcovering.com/wallpaper-calculator."
+  },
+  {
+   "id": "york-wallpaper-observations",
+   "label": "York Wallcoverings bolt chart, product roll formats, prices and the product-page calculator, observed",
+   "status": "market_survey",
+   "source_name": "yorkwallcoverings.com wallpaper calculator chart, two product pages, the installation FAQ and the script WallpaperCalculator.js, 10 September 2026",
+   "source_url": "",
+   "verified_at": "2026-09-10",
+   "expires_at": "2026-12-10",
+   "source_removed_on": "2026-09-25",
+   "source_status": "York moved to a new store after this reading: on 2026-09-25 the calculator page (formerly at yorkwallcoverings.com/wallpaper-calculator), the two product pages, the script and the installation FAQ answer 404. The product pages, the script and the FAQ are linked to archived copies whose figures match this reading; no archived copy of the chart page exists after June 2020, so the chart is kept as read on 2026-09-10, from a text rendering of the live page that Calculiva keeps on file and does not republish, without a link. On 2026-09-30 York's page still answered 404, and the same chart (17 rows, both ceiling heights, same bolt definition) was read live on a page published by Brewster, https://www.brewsterwallcovering.com/wallpaper-calculator.",
+   "sample_size": 2,
+   "scope": "Chart, formats, rules and prices as published by York Wallcoverings on the day read. The chart's bolt is 20.5 in × 33 ft (56 sq ft); the two products read are 20.9 in × 33 ft (about 57.5 sq ft) double rolls. The 4-inch trim allowance in the worked examples is Calculiva's exercise value; York's chart and calculator add no trim.",
+   "bolt": {
+    "width_in": 20.5,
+    "length_ft": 33,
+    "coverage_sqft": 56
+   },
+   "chart": [
+    {
+     "room": "8x10",
+     "bolts8": 5,
+     "bolts9": 6
+    },
+    {
+     "room": "10x10",
+     "bolts8": 6,
+     "bolts9": 6
+    },
+    {
+     "room": "10x12",
+     "bolts8": 6,
+     "bolts9": 7
+    },
+    {
+     "room": "10x14",
+     "bolts8": 7,
+     "bolts9": 7
+    },
+    {
+     "room": "12x12",
+     "bolts8": 7,
+     "bolts9": 7
+    },
+    {
+     "room": "12x14",
+     "bolts8": 7,
+     "bolts9": 8
+    },
+    {
+     "room": "12x16",
+     "bolts8": 8,
+     "bolts9": 9
+    },
+    {
+     "room": "12x18",
+     "bolts8": 9,
+     "bolts9": 9
+    },
+    {
+     "room": "12x20",
+     "bolts8": 9,
+     "bolts9": 10
+    },
+    {
+     "room": "14x14",
+     "bolts8": 8,
+     "bolts9": 9
+    },
+    {
+     "room": "14x16",
+     "bolts8": 8,
+     "bolts9": 9
+    },
+    {
+     "room": "14x18",
+     "bolts8": 9,
+     "bolts9": 10
+    },
+    {
+     "room": "14x20",
+     "bolts8": 9,
+     "bolts9": 10
+    },
+    {
+     "room": "14x22",
+     "bolts8": 10,
+     "bolts9": 11
+    },
+    {
+     "room": "16x16",
+     "bolts8": 9,
+     "bolts9": 10
+    },
+    {
+     "room": "16x18",
+     "bolts8": 9,
+     "bolts9": 10
+    },
+    {
+     "room": "16x22",
+     "bolts8": 10,
+     "bolts9": 12
+    }
+   ],
+   "products_read": [
+    {
+     "name": "Elijah Cream Texture Wallpaper",
+     "sku": "4191-83005",
+     "url": "https://web.archive.org/web/20260115024203/https://www.yorkwallcoverings.com/4191-83005-elijah-cream-texture-wallpaper",
+     "url_archived_on": "2026-01-15",
+     "material": "Non Woven",
+     "installation": "Unpasted",
+     "repeat_in": 0,
+     "match": "Random",
+     "roll_width_in": 20.9,
+     "roll_length_ft": 33,
+     "coverage_sqft": 57.5,
+     "unit": "Double Roll",
+     "price_usd": 120
+    },
+    {
+     "name": "Liora Aqua Floral Trail Wallpaper",
+     "sku": "4191-83013",
+     "url": "https://web.archive.org/web/20260115031941/https://www.yorkwallcoverings.com/4191-83013-liora-aqua-floral-trail-wallpaper",
+     "url_archived_on": "2026-01-15",
+     "material": "Non Woven",
+     "installation": "Unpasted",
+     "repeat_in": 20.87,
+     "match": "Straight",
+     "roll_width_in": 20.9,
+     "roll_length_ft": 33,
+     "coverage_sqft": 57.5,
+     "unit": "Double Roll",
+     "price_usd": 130
+    }
+   ],
+   "product_calculator": {
+    "script_url": "https://web.archive.org/web/20260909230910/https://www.yorkwallcoverings.com/Themes/Prisma/Content/scripts/WallpaperCalculator.js",
+    "script_archived_on": "2026-09-09",
+    "read_at": "2026-09-10",
+    "inputs": "Wall Width (ft), Wall Height (ft), Add Window / Door with width and height in feet; product width, length and repeat read from the product page",
+    "rule": "strip height = height rounded up to whole repeats when the repeat is above zero, else the height, with no trim; strips = ceil(wall width / roll width) minus floor(opening width / roll width) for each opening; strips per roll = floor(roll length / strip height); rolls = ceil(strips / strips per roll); 'Roll is too short' when a strip exceeds the roll. Openings are saved in the browser's localStorage and persist across product pages until removed.",
+    "executions_elijah": [
+     {
+      "inputs": "8 × 8 ft",
+      "output": 2
+     },
+     {
+      "inputs": "9 × 8 ft",
+      "output": 2
+     },
+     {
+      "inputs": "10 × 8 ft",
+      "output": 2
+     },
+     {
+      "inputs": "11 × 8 ft",
+      "output": 2
+     },
+     {
+      "inputs": "11.5 × 8 ft",
+      "output": 2
+     },
+     {
+      "inputs": "12 × 8 ft",
+      "output": 2
+     },
+     {
+      "inputs": "13 × 8 ft",
+      "output": 2
+     },
+     {
+      "inputs": "14 × 8 ft",
+      "output": 3
+     },
+     {
+      "inputs": "16 × 8 ft",
+      "output": 3
+     },
+     {
+      "inputs": "18 × 8 ft",
+      "output": 3
+     },
+     {
+      "inputs": "24 × 8 ft",
+      "output": 4
+     },
+     {
+      "inputs": "12 × 9 ft",
+      "output": 3
+     },
+     {
+      "inputs": "12 × 10 ft",
+      "output": 3
+     },
+     {
+      "inputs": "14 × 9 ft",
+      "output": 3
+     },
+     {
+      "inputs": "20 × 8 ft",
+      "output": 3
+     },
+     {
+      "inputs": "36 × 7 ft",
+      "output": 6
+     },
+     {
+      "inputs": "36 × 8 ft",
+      "output": 6
+     },
+     {
+      "inputs": "36 × 9 ft",
+      "output": 7
+     },
+     {
+      "inputs": "40 × 10 ft",
+      "output": 8
+     },
+     {
+      "inputs": "36 × 12 ft",
+      "output": 11
+     },
+     {
+      "inputs": "36 × 8 ft with one 3 × 7 ft door",
+      "output": 5
+     }
+    ],
+    "executions_liora": [
+     {
+      "inputs": "36 × 8 ft with four 3 ft doors persisted from the previous product page",
+      "output": 6
+     },
+     {
+      "inputs": "36 × 9 ft, same four doors",
+      "output": 6
+     },
+     {
+      "inputs": "12 × 8 ft, same four doors",
+      "output": 1
+     },
+     {
+      "inputs": "20 × 8 ft, same four doors",
+      "output": 3
+     }
+    ]
+   },
+   "installation_faq": [
+    {
+     "url": "https://web.archive.org/web/20260420175931/http://www.yorkwallcoverings.com/wallpaper-installation-questions"
+    },
+    {
+     "url": "https://web.archive.org/web/20260420175931/http://www.yorkwallcoverings.com/wallpaper-installation-questions"
+    }
+   ]
+  }
+ ]
+}
