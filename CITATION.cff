@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+type: dataset
+title: "Calculiva home improvement constants register"
+version: "2026-10-01"
+date-released: 2026-10-01
+authors:
+  - name: "Calculiva"
+    website: "https://calculiva.com/"
+license: CC-BY-4.0
+url: "https://calculiva.com/data-sources/"
+repository: "https://github.com/tresor4k/calculiva-home-improvement-data"
+abstract: "The sourced trade constants loaded by the calculators on calculiva.com: nominal and actual board sizes, stock lengths, roll and bolt formats, panel modules, allowances and published estimating rules, each with its source, its verification date and its status. The CSV resource is the register and holds no value; the values are in the JSON resource. The calculators' editable default settings are not part of it."
