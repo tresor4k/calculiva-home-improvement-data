@@ -16,6 +16,43 @@ user changes, not sourced constants.
 
 [Flooring calculators](https://calculiva.com/flooring/) · [Tile calculators](https://calculiva.com/tile/) · [Wallpaper calculators](https://calculiva.com/wallpaper/) · [Wall paneling calculators](https://calculiva.com/wall-paneling/) · [Landscaping calculators](https://calculiva.com/landscaping/) · [Window treatment calculators](https://calculiva.com/windows/)
 
+## Calculators on calculiva.com that read these records
+
+Generated from the rendered pages: a page is listed when it links a source of the record, or when its script carries the record.
+
+| Calculator | Records it reads |
+|---|---|
+| [calculiva.com/flooring/carpet-flooring-calculator/](https://calculiva.com/flooring/carpet-flooring-calculator/) | `carpet-roll-observations` |
+| [calculiva.com/flooring/epoxy-flooring-calculator/](https://calculiva.com/flooring/epoxy-flooring-calculator/) | `epoxy-coverage-observations` |
+| [calculiva.com/flooring/flooring-calculator-cost/](https://calculiva.com/flooring/flooring-calculator-cost/) | `flooring-cost-estimator-bases` |
+| [calculiva.com/flooring/flooring-calculator/](https://calculiva.com/flooring/flooring-calculator/) | `flooring-joint-checks`, `laminate-layer-guidance` |
+| [calculiva.com/flooring/gym-flooring-calculator/](https://calculiva.com/flooring/gym-flooring-calculator/) | `gym-flooring-observations` |
+| [calculiva.com/flooring/hardwood-flooring-calculator/](https://calculiva.com/flooring/hardwood-flooring-calculator/) | `hardwood-racking-guidance` |
+| [calculiva.com/flooring/laminate-flooring-calculator/](https://calculiva.com/flooring/laminate-flooring-calculator/) | `flooring-joint-checks`, `laminate-layer-guidance` |
+| [calculiva.com/landscaping/asphalt-calculator/](https://calculiva.com/landscaping/asphalt-calculator/) | `asphalt-unit-weight-observations` |
+| [calculiva.com/landscaping/mulch-calculator/](https://calculiva.com/landscaping/mulch-calculator/) | `mulch-bag-observations`, `mulch-depth-guidance`, `playground-surfacing-cpsc`, `soil-weights-and-sale-units` |
+| [calculiva.com/landscaping/sod-calculator/](https://calculiva.com/landscaping/sod-calculator/) | `sod-format-observations`, `sod-installation-guidance`, `sod-plugging-ifas` |
+| [calculiva.com/landscaping/soil-calculator/](https://calculiva.com/landscaping/soil-calculator/) | `soil-bag-observations`, `soil-weights-and-sale-units` |
+| [calculiva.com/tile/ceiling-tile-calculator/](https://calculiva.com/tile/ceiling-tile-calculator/) | `ceiling-panel-guidance` |
+| [calculiva.com/tile/deck-tile-calculator/](https://calculiva.com/tile/deck-tile-calculator/) | `deck-module-guidance` |
+| [calculiva.com/tile/grout-calculator/](https://calculiva.com/tile/grout-calculator/) | `grout-coverage-tables`, `grout-joint-practice`, `tile-joint-guidance` |
+| [calculiva.com/tile/lowes-tile-calculator/](https://calculiva.com/tile/lowes-tile-calculator/) | `lowes-rectangular-tile` |
+| [calculiva.com/tile/mosaic-tile-calculator/](https://calculiva.com/tile/mosaic-tile-calculator/) | `mosaic-sheet-planning` |
+| [calculiva.com/tile/pool-waterline-tile-calculator/](https://calculiva.com/tile/pool-waterline-tile-calculator/) | `pool-band-planning` |
+| [calculiva.com/tile/shower-tile-calculator/](https://calculiva.com/tile/shower-tile-calculator/) | `tile-joint-guidance` |
+| [calculiva.com/tile/tile-calculator/](https://calculiva.com/tile/tile-calculator/) | `herringbone-format-guidance`, `tile-joint-guidance` |
+| [calculiva.com/tile/wall-tile-calculator/](https://calculiva.com/tile/wall-tile-calculator/) | `tile-joint-guidance` |
+| [calculiva.com/wall-paneling/board-and-batten-calculator/](https://calculiva.com/wall-paneling/board-and-batten-calculator/) | `batten-spacing-conventions`, `lumber-nominal-actual-softwood`, `stock-lengths-us`, `trim-nominal-actual-mdf` |
+| [calculiva.com/wall-paneling/picture-frame-molding-calculator/](https://calculiva.com/wall-paneling/picture-frame-molding-calculator/) | `stock-lengths-us`, `trim-nominal-actual-mdf`, `trim-waste-allowance` |
+| [calculiva.com/wall-paneling/wainscoting-calculator/](https://calculiva.com/wall-paneling/wainscoting-calculator/) | `lumber-nominal-actual-softwood`, `stock-lengths-us`, `trim-nominal-actual-mdf`, `wainscot-height-conventions` |
+| [calculiva.com/wallpaper/painted-paper-wallpaper-calculator/](https://calculiva.com/wallpaper/painted-paper-wallpaper-calculator/) | `painted-paper-wallpaper-observations`, `wallpaper-roll-observations` |
+| [calculiva.com/wallpaper/wallpaper-calculator-with-repeat/](https://calculiva.com/wallpaper/wallpaper-calculator-with-repeat/) | `wallpaper-roll-observations` |
+| [calculiva.com/wallpaper/wallpaper-calculator-yards/](https://calculiva.com/wallpaper/wallpaper-calculator-yards/) | `painted-paper-wallpaper-observations`, `wallpaper-roll-observations` |
+| [calculiva.com/wallpaper/wallpaper-calculator/](https://calculiva.com/wallpaper/wallpaper-calculator/) | `painted-paper-wallpaper-observations`, `wallpaper-roll-observations` |
+| [calculiva.com/wallpaper/york-wallpaper-calculator/](https://calculiva.com/wallpaper/york-wallpaper-calculator/) | `york-wallpaper-observations` |
+| [calculiva.com/windows/curtain-fabric-calculator/](https://calculiva.com/windows/curtain-fabric-calculator/) | `curtain-measuring-conventions` |
+| [calculiva.com/windows/curtain-size-calculator/](https://calculiva.com/windows/curtain-size-calculator/) | `curtain-measuring-conventions` |
+
 ## Files
 
 | File | Content | Copy served by calculiva.com |
