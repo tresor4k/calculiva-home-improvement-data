@@ -1,7 +1,7 @@
 {
  "name": "calculiva-home-improvement-constants",
  "title": "Calculiva home improvement constants register",
- "version": "2026-10-01",
+ "version": "2026-10-04",
  "homepage": "https://calculiva.com/data-sources/",
  "description": "The sourced trade constants loaded by the calculators on calculiva.com: nominal and actual board sizes, stock lengths, roll and bolt formats, panel modules, allowances and published estimating rules, each with its source, its verification date and its status. The CSV resource is the register and holds no value; the values are in the JSON resource. The calculators' editable default settings are not part of it.",
  "licenses": [

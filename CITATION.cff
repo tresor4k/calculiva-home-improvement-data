@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "If you use this dataset, please cite it as below."
 type: dataset
 title: "Calculiva home improvement constants register"
-version: "2026-10-01"
-date-released: 2026-10-01
+version: "2026-10-04"
+date-released: 2026-10-04
 authors:
   - name: "Calculiva"
     website: "https://calculiva.com/"
