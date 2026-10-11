@@ -1,6 +1,6 @@
 # Calculiva home improvement constants register
 
-Version 2026-10-04 · 35 records · published by [Calculiva](https://calculiva.com/data-sources/) · license CC BY 4.0
+Version 2026-10-11 · 35 records · published by [Calculiva](https://calculiva.com/data-sources/) · license CC BY 4.0
 
 The sourced trade constants that the home improvement calculators on calculiva.com load, each with
 the source it was read from, the date it was last verified and its status. The calculators read
@@ -152,4 +152,4 @@ standard unless its status is `standard`, and nothing replaces a manufacturer's 
 
 Released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), within this limit: CC BY 4.0 covers Calculiva's own contribution only: the compilation, its structure, the statuses, the scopes and the notes. Third-party values (published charts, list prices, product dimensions, tool outputs) are attributed to their sources and dated; no right over them is granted or claimed. Third-party text is not reproduced: each record names the page it was read on, and the excerpts read stay in Calculiva's working files. Calculiva is not affiliated with any company named.
 
-Cite as: Calculiva, *Calculiva home improvement constants register*, version 2026-10-04, https://calculiva.com/data-sources/
+Cite as: Calculiva, *Calculiva home improvement constants register*, version 2026-10-11, https://calculiva.com/data-sources/
