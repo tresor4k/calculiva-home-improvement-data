@@ -1,7 +1,7 @@
 {
  "name": "calculiva-home-improvement-constants",
  "title": "Calculiva home improvement constants register",
- "version": "2026-10-11",
+ "version": "2026-10-14",
  "license": "CC-BY-4.0",
  "rights": "CC BY 4.0 covers Calculiva's own contribution only: the compilation, its structure, the statuses, the scopes and the notes. Third-party values (published charts, list prices, product dimensions, tool outputs) are attributed to their sources and dated; no right over them is granted or claimed. Third-party text is not reproduced: each record names the page it was read on, and the excerpts read stay in Calculiva's working files. Calculiva is not affiliated with any company named.",
  "homepage": "https://calculiva.com/data-sources/",
@@ -499,7 +499,8 @@
    "public_handbook": {
     "publication": 325,
     "url": "https://www.cpsc.gov/s3fs-public/325.pdf",
-    "dated": "2015-12-29",
+    "dated": "2025-08-05",
+    "dated_note": "Date of the PDF 325 currently online at the same URL (latest ModDate in the file: 2025-08-05). Values re-read on 2026-10-09, identical.",
     "compression_min_fraction": 0.25,
     "table_2_minimum_compressed_depths": [
      {
@@ -914,7 +915,8 @@
    "values_withheld": "Values not redistributed: the publisher's terms do not allow republication. Read them at the source or on the Calculiva page that cites them.",
    "withheld_hosts": [
     "www.brewsterwallcovering.com",
-    "www.yorkwallcoverings.com"
+    "www.yorkwallcoverings.com",
+    "yorkwallcoverings.com"
    ]
   }
  ]
